@@ -803,4 +803,4 @@
       </div>
     </header>
     
-    <main class="site-main">
+    <main id="main-content" class="site-main">

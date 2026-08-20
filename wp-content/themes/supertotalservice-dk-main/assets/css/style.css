@@ -24,14 +24,14 @@ Tags: landing page, responsive, custom header, custom footer
 /* Extracted CSS from page */
 @font-face {
   font-family: 'Volte Rounded';
-  src: url('assets/fonts/VolteRounded-Regular.otf') format('opentype');
+  src: url('../fonts/VolteRounded-Regular.otf') format('opentype');
   font-style: normal;
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: 'Volte Rounded';
-  src: url('assets/fonts/VolteRounded-Bold.otf') format('opentype');
+  src: url('../fonts/VolteRounded-Bold.otf') format('opentype');
   font-style: normal;
   font-weight: 700;
   font-display: swap;
@@ -531,6 +531,191 @@ h6,
 }
 .trust-grid {
   grid-template-columns: repeat(4, minmax(0px, 1fr));
+}
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.4rem;
+}
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  transition: transform 180ms ease, border-color 180ms ease;
+}
+.blog-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 139, 209, 0.38);
+}
+.blog-card-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  background: linear-gradient(135deg, var(--primary-strong), var(--accent));
+}
+.blog-card-content {
+  padding: 1.35rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.blog-card-date {
+  color: var(--primary);
+  font-size: 0.8rem;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.blog-card-date::before {
+  content: '📅';
+  font-size: 1rem;
+}
+.blog-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0.2rem 0 0.5rem;
+  line-height: 1.4;
+}
+.blog-card-title a {
+  color: inherit;
+  transition: color 180ms ease;
+}
+.blog-card-title a:hover {
+  color: var(--primary);
+}
+.blog-card-excerpt {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  flex-grow: 1;
+  margin: 0 0 1.2rem;
+}
+.blog-card-link {
+  color: var(--primary);
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: gap 180ms ease;
+  width: fit-content;
+}
+.blog-card-link:hover {
+  gap: 0.7rem;
+}
+.blog-empty {
+  background: var(--surface-muted);
+  border: 1px solid var(--border);
+  padding: 4rem 2rem;
+  text-align: center;
+  border-radius: var(--radius-lg);
+}
+.blog-empty p {
+  color: var(--muted);
+  font-size: 1.05rem;
+  margin: 0;
+}
+.blog-post-container {
+  width: min(100% - 2rem, 820px);
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+.blog-post-meta {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.blog-post-image {
+  width: 100%;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  margin-bottom: 2rem;
+  display: block;
+  box-shadow: var(--shadow);
+}
+.blog-post-content {
+  line-height: 1.8;
+  color: var(--text);
+  font-size: 1.05rem;
+}
+.blog-post-content p {
+  margin-bottom: 1.5rem;
+  color: var(--muted);
+}
+.blog-post-content h2 {
+  font-size: 1.5rem;
+  color: var(--text);
+  margin: 2rem 0 1rem;
+  font-weight: 700;
+}
+.blog-post-content h3 {
+  font-size: 1.2rem;
+  color: var(--text);
+  margin: 1.5rem 0 0.75rem;
+  font-weight: 700;
+}
+.blog-post-content ul,
+.blog-post-content ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--muted);
+}
+.blog-post-content li {
+  margin-bottom: 0.5rem;
+}
+.blog-post-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  margin: 2rem 0;
+  box-shadow: var(--shadow);
+}
+.blog-post-content strong {
+  font-weight: 700;
+  color: var(--text);
+}
+.blog-post-cta {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: var(--surface-muted);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  border-left: 4px solid var(--primary);
+}
+.blog-post-cta p {
+  margin-bottom: 1rem;
+  color: var(--muted);
+}
+.back-link {
+  display: inline-block;
+  margin-bottom: 2rem;
+  color: var(--primary);
+  font-weight: 700;
+  transition: color 180ms ease;
+}
+.back-link:hover {
+  color: var(--accent);
+}
+@media (max-width: 760px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
 }
 .info-card,
 .testimonial-card,
@@ -1355,37 +1540,22 @@ textarea:focus {
 .service-description-card li {
   color: var(--muted);
 }
-#main-content
-  > section.section
-  > .container
-  > div[style*='background:white'][style*='padding:1.5rem'] {
+#main-content section.section .container div[style*='background:white'][style*='padding:1.5rem'] {
   background: var(--surface) !important;
   border: 1px solid var(--border) !important;
   border-radius: 12px !important;
   box-shadow: var(--shadow) !important;
   color: var(--text) !important;
 }
-#main-content
-  > section.section
-  > .container
-  > div[style*='background:white'][style*='padding:1.5rem']
+#main-content section.section .container div[style*='background:white'][style*='padding:1.5rem']
   h2,
-#main-content
-  > section.section
-  > .container
-  > div[style*='background:white'][style*='padding:1.5rem']
+#main-content section.section .container div[style*='background:white'][style*='padding:1.5rem']
   h3 {
   color: var(--text) !important;
 }
-#main-content
-  > section.section
-  > .container
-  > div[style*='background:white'][style*='padding:1.5rem']
+#main-content section.section .container div[style*='background:white'][style*='padding:1.5rem']
   p,
-#main-content
-  > section.section
-  > .container
-  > div[style*='background:white'][style*='padding:1.5rem']
+#main-content section.section .container div[style*='background:white'][style*='padding:1.5rem']
   li {
   color: var(--muted) !important;
 }
@@ -1601,7 +1771,7 @@ textarea:focus {
 /* From assets/styles.css */
 @font-face {
   font-family: 'Volte Rounded';
-  src: url('assets/fonts/VolteRounded-Regular.otf') format('opentype');
+  src: url('../fonts/VolteRounded-Regular.otf') format('opentype');
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -1609,7 +1779,7 @@ textarea:focus {
 
 @font-face {
   font-family: 'Volte Rounded';
-  src: url('assets/fonts/VolteRounded-Bold.otf') format('opentype');
+  src: url('../fonts/VolteRounded-Bold.otf') format('opentype');
   font-style: normal;
   font-weight: 700;
   font-display: swap;
@@ -2949,37 +3119,22 @@ textarea:focus {
 }
 
 /* Backward-compatible override for older generated pages with inline style */
-#main-content
-  > section.section
-  > .container
-  > div[style*='background:white'][style*='padding:1.5rem'] {
+#main-content section.section .container div[style*='background:white'][style*='padding:1.5rem'] {
   background: var(--surface) !important;
   border: 1px solid var(--border) !important;
   border-radius: 12px !important;
   box-shadow: var(--shadow) !important;
   color: var(--text) !important;
 }
-#main-content
-  > section.section
-  > .container
-  > div[style*='background:white'][style*='padding:1.5rem']
+#main-content section.section .container div[style*='background:white'][style*='padding:1.5rem']
   h2,
-#main-content
-  > section.section
-  > .container
-  > div[style*='background:white'][style*='padding:1.5rem']
+#main-content section.section .container div[style*='background:white'][style*='padding:1.5rem']
   h3 {
   color: var(--text) !important;
 }
-#main-content
-  > section.section
-  > .container
-  > div[style*='background:white'][style*='padding:1.5rem']
+#main-content section.section .container div[style*='background:white'][style*='padding:1.5rem']
   p,
-#main-content
-  > section.section
-  > .container
-  > div[style*='background:white'][style*='padding:1.5rem']
+#main-content section.section .container div[style*='background:white'][style*='padding:1.5rem']
   li {
   color: var(--muted) !important;
 }
@@ -3198,7 +3353,7 @@ textarea:focus {
 /* From assets/styles.css */
 @font-face {
   font-family: 'Volte Rounded';
-  src: url('assets/fonts/VolteRounded-Regular.otf') format('opentype');
+  src: url('../fonts/VolteRounded-Regular.otf') format('opentype');
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -3206,7 +3361,7 @@ textarea:focus {
 
 @font-face {
   font-family: 'Volte Rounded';
-  src: url('assets/fonts/VolteRounded-Bold.otf') format('opentype');
+  src: url('../fonts/VolteRounded-Bold.otf') format('opentype');
   font-style: normal;
   font-weight: 700;
   font-display: swap;
@@ -4546,37 +4701,22 @@ textarea:focus {
 }
 
 /* Backward-compatible override for older generated pages with inline style */
-#main-content
-  > section.section
-  > .container
-  > div[style*='background:white'][style*='padding:1.5rem'] {
+#main-content section.section .container div[style*='background:white'][style*='padding:1.5rem'] {
   background: var(--surface) !important;
   border: 1px solid var(--border) !important;
   border-radius: 12px !important;
   box-shadow: var(--shadow) !important;
   color: var(--text) !important;
 }
-#main-content
-  > section.section
-  > .container
-  > div[style*='background:white'][style*='padding:1.5rem']
+#main-content section.section .container div[style*='background:white'][style*='padding:1.5rem']
   h2,
-#main-content
-  > section.section
-  > .container
-  > div[style*='background:white'][style*='padding:1.5rem']
+#main-content section.section .container div[style*='background:white'][style*='padding:1.5rem']
   h3 {
   color: var(--text) !important;
 }
-#main-content
-  > section.section
-  > .container
-  > div[style*='background:white'][style*='padding:1.5rem']
+#main-content section.section .container div[style*='background:white'][style*='padding:1.5rem']
   p,
-#main-content
-  > section.section
-  > .container
-  > div[style*='background:white'][style*='padding:1.5rem']
+#main-content section.section .container div[style*='background:white'][style*='padding:1.5rem']
   li {
   color: var(--muted) !important;
 }

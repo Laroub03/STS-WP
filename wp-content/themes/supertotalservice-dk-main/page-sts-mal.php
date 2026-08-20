@@ -32,7 +32,7 @@ get_header(); ?>
             </div>
             <p data-wpc-id="wpc_5223f85509" data-wpc-editable="text">Perfekt til erhvervslokaler, boligforeninger, renoveringer og løbende vedligehold.</p>
           </div>
-          <div class="grid pillar-service-grid" data-pillar-directory="mal" data-path-prefix="../"><p data-wpc-id="wpc_ce745f38c5" data-wpc-editable="text">Kunne ikke indlæse services lige nu.</p></div>
+          <?php sts_render_service_category_cards('mal'); ?>
         </div>
       </section></div>
 <div class="section-cta"><section class="cta-band" id="cta" data-wpc-id="wpc_3e9dbc1d43" data-wpc-editable="section">

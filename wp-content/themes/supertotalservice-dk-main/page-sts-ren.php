@@ -32,7 +32,7 @@ get_header(); ?>
             </div>
             <p data-wpc-id="wpc_ba305b8deb" data-wpc-editable="text">Til kontorer, erhvervsejendomme, fællesarealer og udendørs drift året rundt.</p>
           </div>
-          <div class="grid pillar-service-grid" data-pillar-directory="ren" data-path-prefix="../"><p data-wpc-id="wpc_ce745f38c5" data-wpc-editable="text">Kunne ikke indlæse services lige nu.</p></div>
+          <?php sts_render_service_category_cards('ren'); ?>
         </div>
       </section></div>
 <div class="section-cta"><section class="cta-band" id="cta" data-wpc-id="wpc_3b8db46ff3" data-wpc-editable="section">

@@ -9,6 +9,36 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+function sts_render_service_category_cards($category) {
+    $services = get_posts(array(
+        'post_type' => 'sts_service',
+        'post_status' => 'publish',
+        'numberposts' => -1,
+        'orderby' => 'title',
+        'order' => 'ASC',
+        'meta_key' => '_sts_service_category',
+        'meta_value' => sanitize_key($category),
+    ));
+    echo '<div class="grid pillar-service-grid">';
+    if (!$services) {
+        echo '<p>Ingen services i denne kategori endnu.</p></div>';
+        return;
+    }
+    foreach ($services as $service) {
+        $image = function_exists('sts_content_service_image') ? sts_content_service_image($service->ID) : '';
+        $description = get_the_excerpt($service);
+        // Link to the designed page-<slug>.php page (post_name matches its slug), not the generic /ydelse/ CPT single view
+        $service_page = get_page_by_path($service->post_name);
+        $service_url = $service_page ? get_permalink($service_page) : home_url('/' . $service->post_name . '/');
+        echo '<a class="service-card pillar-service-card" href="' . esc_url($service_url) . '">';
+        if ($image) {
+            echo '<img class="service-card-media" src="' . esc_url($image) . '" alt="' . esc_attr($service->post_title) . '" loading="lazy">';
+        }
+        echo '<div class="service-card-body"><h3>' . esc_html($service->post_title) . '</h3><p>' . esc_html($description) . '</p><span class="service-link">Læs mere →</span></div></a>';
+    }
+    echo '</div>';
+}
+
 // WPConvert Editor — inline content editing for converted themes
 define('WPCONVERT_TIER', 'starter');
 // EC-BLOG-047: Pro/Agency import posts + skip SPA pages for /blog/slug; Starter uses static page-*.php + routes.json only
@@ -6528,7 +6558,8 @@ function wpconvert_enqueue_assets() {
     
     // Enqueue main stylesheet with high priority to override WordPress defaults
     // Use priority 999 to ensure it loads after WordPress default styles
-    wp_enqueue_style('wpconvert-style', get_stylesheet_uri(), array(), '2.0.0');
+    // filemtime() cache-busts so edits to style.css are picked up without a hard refresh
+    wp_enqueue_style('wpconvert-style', get_stylesheet_uri(), array(), filemtime(get_stylesheet_directory() . '/style.css'));
     
     // NOTE: Do NOT add inline font-family override - it breaks custom fonts (Google Fonts, etc.)
     // Custom fonts are loaded via @import in style.css and/or wp_enqueue_style for external fonts
@@ -6564,7 +6595,7 @@ function wpconvert_enqueue_assets() {
                     'wpconvert-site-styles',
                     get_template_directory_uri() . '/assets/css/style.css',
                     array('wpconvert-style'), // Load after theme stylesheet
-                    '2.0.0'
+                    filemtime($css_file)
                 );
                 continue;
             }
@@ -6573,7 +6604,7 @@ function wpconvert_enqueue_assets() {
                 'wpconvert-asset-' . sanitize_title($file_name),
                 get_template_directory_uri() . '/assets/css/' . $file_name,
                 array('wpconvert-style'), // Load after main stylesheet
-                '2.0.0'
+                filemtime($css_file)
             );
         }
     }

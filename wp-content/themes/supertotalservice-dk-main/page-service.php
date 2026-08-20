@@ -55,34 +55,6 @@ get_header(); ?>
               <a class="pillar-cta" data-pillar-category-link="ren" href="<?php echo home_url('/sts-ren/'); ?>" data-wpc-id="wpc_b332e71e40" data-wpc-editable="button">Se STS Ren</a>
             </article>
           </div>
-          <?php
-          $sts_services = get_posts(array(
-              'post_type' => 'sts_service',
-              'post_status' => 'publish',
-              'numberposts' => -1,
-              'orderby' => 'title',
-              'order' => 'ASC',
-          ));
-          if ($sts_services) :
-          ?>
-          <div class="service-directory-grid" aria-label="Alle serviceydelser">
-            <?php foreach ($sts_services as $sts_service) :
-                $sts_image = function_exists('sts_content_service_image') ? sts_content_service_image($sts_service->ID) : '';
-                $sts_icon = get_post_meta($sts_service->ID, '_sts_service_icon', true);
-                $sts_description = get_the_excerpt($sts_service);
-            ?>
-              <article class="service-directory-card">
-                <?php if ($sts_image) : ?><img src="<?php echo esc_url($sts_image); ?>" alt="<?php echo esc_attr($sts_service->post_title); ?>" loading="lazy"><?php endif; ?>
-                <div class="service-card-body">
-                  <div class="service-tag-icon"><?php echo esc_html($sts_icon ?: '🔧'); ?></div>
-                  <h3><?php echo esc_html($sts_service->post_title); ?></h3>
-                  <p><?php echo esc_html($sts_description); ?></p>
-                  <a class="service-link" href="<?php echo esc_url(get_permalink($sts_service)); ?>">Læs mere</a>
-                </div>
-              </article>
-            <?php endforeach; ?>
-          </div>
-          <?php endif; ?>
         </div>
       </section></div>
 <div class="section-cta"><section class="cta-band" id="cta" data-wpc-id="wpc_9a9062ffd3" data-wpc-editable="section">

@@ -1355,37 +1355,22 @@ textarea:focus {
 .service-description-card li {
   color: var(--muted);
 }
-#main-content
-  > section.section
-  > .container
-  > div[style*='background:white'][style*='padding:1.5rem'] {
+#main-content section.section .container div[style*='background:white'][style*='padding:1.5rem'] {
   background: var(--surface) !important;
   border: 1px solid var(--border) !important;
   border-radius: 12px !important;
   box-shadow: var(--shadow) !important;
   color: var(--text) !important;
 }
-#main-content
-  > section.section
-  > .container
-  > div[style*='background:white'][style*='padding:1.5rem']
+#main-content section.section .container div[style*='background:white'][style*='padding:1.5rem']
   h2,
-#main-content
-  > section.section
-  > .container
-  > div[style*='background:white'][style*='padding:1.5rem']
+#main-content section.section .container div[style*='background:white'][style*='padding:1.5rem']
   h3 {
   color: var(--text) !important;
 }
-#main-content
-  > section.section
-  > .container
-  > div[style*='background:white'][style*='padding:1.5rem']
+#main-content section.section .container div[style*='background:white'][style*='padding:1.5rem']
   p,
-#main-content
-  > section.section
-  > .container
-  > div[style*='background:white'][style*='padding:1.5rem']
+#main-content section.section .container div[style*='background:white'][style*='padding:1.5rem']
   li {
   color: var(--muted) !important;
 }
@@ -2949,37 +2934,22 @@ textarea:focus {
 }
 
 /* Backward-compatible override for older generated pages with inline style */
-#main-content
-  > section.section
-  > .container
-  > div[style*='background:white'][style*='padding:1.5rem'] {
+#main-content section.section .container div[style*='background:white'][style*='padding:1.5rem'] {
   background: var(--surface) !important;
   border: 1px solid var(--border) !important;
   border-radius: 12px !important;
   box-shadow: var(--shadow) !important;
   color: var(--text) !important;
 }
-#main-content
-  > section.section
-  > .container
-  > div[style*='background:white'][style*='padding:1.5rem']
+#main-content section.section .container div[style*='background:white'][style*='padding:1.5rem']
   h2,
-#main-content
-  > section.section
-  > .container
-  > div[style*='background:white'][style*='padding:1.5rem']
+#main-content section.section .container div[style*='background:white'][style*='padding:1.5rem']
   h3 {
   color: var(--text) !important;
 }
-#main-content
-  > section.section
-  > .container
-  > div[style*='background:white'][style*='padding:1.5rem']
+#main-content section.section .container div[style*='background:white'][style*='padding:1.5rem']
   p,
-#main-content
-  > section.section
-  > .container
-  > div[style*='background:white'][style*='padding:1.5rem']
+#main-content section.section .container div[style*='background:white'][style*='padding:1.5rem']
   li {
   color: var(--muted) !important;
 }
@@ -4546,37 +4516,22 @@ textarea:focus {
 }
 
 /* Backward-compatible override for older generated pages with inline style */
-#main-content
-  > section.section
-  > .container
-  > div[style*='background:white'][style*='padding:1.5rem'] {
+#main-content section.section .container div[style*='background:white'][style*='padding:1.5rem'] {
   background: var(--surface) !important;
   border: 1px solid var(--border) !important;
   border-radius: 12px !important;
   box-shadow: var(--shadow) !important;
   color: var(--text) !important;
 }
-#main-content
-  > section.section
-  > .container
-  > div[style*='background:white'][style*='padding:1.5rem']
+#main-content section.section .container div[style*='background:white'][style*='padding:1.5rem']
   h2,
-#main-content
-  > section.section
-  > .container
-  > div[style*='background:white'][style*='padding:1.5rem']
+#main-content section.section .container div[style*='background:white'][style*='padding:1.5rem']
   h3 {
   color: var(--text) !important;
 }
-#main-content
-  > section.section
-  > .container
-  > div[style*='background:white'][style*='padding:1.5rem']
+#main-content section.section .container div[style*='background:white'][style*='padding:1.5rem']
   p,
-#main-content
-  > section.section
-  > .container
-  > div[style*='background:white'][style*='padding:1.5rem']
+#main-content section.section .container div[style*='background:white'][style*='padding:1.5rem']
   li {
   color: var(--muted) !important;
 }
