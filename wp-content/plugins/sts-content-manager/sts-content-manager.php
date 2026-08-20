@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name: STS Content Manager
- * Description: Importerer og administrerer STS-serviceydelser fra den originale side.
- * Version: 1.0.0
+ * Description: Administrerer STS-serviceydelser og de rigtige servicesider (/&lt;slug&gt;/) via en genbrugelig sidetemplate.
+ * Version: 2.0.0
  * Author: STS ApS
  * Requires at least: 5.8
  * Requires PHP: 7.4
@@ -12,57 +12,192 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('STS_CONTENT_VERSION', '1.0.0');
+define('STS_CONTENT_VERSION', '2.1.1');
+define('STS_CONTENT_PATH', plugin_dir_path(__FILE__));
+define('STS_CONTENT_TEMPLATE', 'sts-service-page');
 
+require_once STS_CONTENT_PATH . 'includes/helpers.php';
+require_once STS_CONTENT_PATH . 'includes/theme-import.php';
+if (is_admin()) {
+    require_once STS_CONTENT_PATH . 'includes/admin.php';
+}
+
+/**
+ * The CPT is a data store only — the public URL is the real page at /<slug>/.
+ */
 function sts_content_register_service_type() {
     register_post_type('sts_service', array(
         'labels' => array(
             'name' => 'Serviceydelser',
             'singular_name' => 'Serviceydelse',
-            'add_new_item' => 'Tilføj serviceydelse',
-            'edit_item' => 'Rediger serviceydelse',
-            'new_item' => 'Ny serviceydelse',
-            'view_item' => 'Vis serviceydelse',
-            'search_items' => 'Søg i serviceydelser',
-            'not_found' => 'Ingen serviceydelser fundet',
         ),
-        'public' => true,
-        'show_ui' => true,
-        'show_in_menu' => true,
-        'menu_icon' => 'dashicons-admin-tools',
-        'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
+        'public' => false,
+        'publicly_queryable' => false,
+        'exclude_from_search' => true,
+        'show_ui' => false,
+        'show_in_menu' => false,
+        'show_in_rest' => false,
+        'supports' => array('title', 'editor', 'excerpt'),
         'has_archive' => false,
-        'rewrite' => array('slug' => 'ydelse', 'with_front' => false),
-        'show_in_rest' => true,
+        'rewrite' => false,
     ));
 }
 add_action('init', 'sts_content_register_service_type');
 
-function sts_content_enqueue_admin_media($hook) {
-    if (in_array($hook, array('post.php', 'post-new.php'), true) && isset($_GET['post_type']) && $_GET['post_type'] === 'sts_service') {
-        wp_enqueue_media();
+/* ── Page template ─────────────────────────────────────────────── */
+
+function sts_content_register_template($templates) {
+    $templates[STS_CONTENT_TEMPLATE] = 'STS Serviceside';
+    return $templates;
+}
+add_filter('theme_page_templates', 'sts_content_register_template');
+
+function sts_content_template_include($template) {
+    if (is_page() && sts_content_page_uses_template(get_queried_object_id())) {
+        $file = STS_CONTENT_PATH . 'templates/service-page.php';
+        if (is_readable($file)) {
+            return $file;
+        }
+    }
+    return $template;
+}
+add_filter('template_include', 'sts_content_template_include', 100);
+
+function sts_content_page_uses_template($page_id) {
+    return get_post_meta($page_id, '_sts_service_template', true) === '1'
+        || get_page_template_slug($page_id) === STS_CONTENT_TEMPLATE;
+}
+
+function sts_content_set_page_template($page_id, $enabled) {
+    if ($enabled) {
+        update_post_meta($page_id, '_sts_service_template', '1');
+        update_post_meta($page_id, '_wp_page_template', STS_CONTENT_TEMPLATE);
+    } else {
+        delete_post_meta($page_id, '_sts_service_template');
+        if (get_page_template_slug($page_id) === STS_CONTENT_TEMPLATE) {
+            delete_post_meta($page_id, '_wp_page_template');
+        }
     }
 }
-add_action('admin_enqueue_scripts', 'sts_content_enqueue_admin_media');
+
+/**
+ * The theme rewrites _wp_page_template back to its generated page-<slug>.php on
+ * every repair pass — keep our own pages pointed at the service template.
+ */
+function sts_content_protect_page_template($check, $object_id, $meta_key, $meta_value) {
+    if ($meta_key !== '_wp_page_template' || $meta_value === STS_CONTENT_TEMPLATE) {
+        return $check;
+    }
+    if (get_post_meta($object_id, '_sts_service_template', true) === '1') {
+        return false;
+    }
+    return $check;
+}
+add_filter('update_post_metadata', 'sts_content_protect_page_template', 10, 4);
+
+function sts_content_flag_template_on_save($post_id) {
+    if (get_page_template_slug($post_id) === STS_CONTENT_TEMPLATE) {
+        update_post_meta($post_id, '_sts_service_template', '1');
+    }
+}
+add_action('save_post_page', 'sts_content_flag_template_on_save');
+
+/**
+ * Old CPT permalinks (/ydelse/<slug>/) now point at the real page.
+ */
+function sts_content_redirect_legacy_urls() {
+    if (is_admin()) {
+        return;
+    }
+    $path = trim((string) parse_url($_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH), '/');
+    if (strpos($path, 'ydelse/') !== 0) {
+        return;
+    }
+    $slug = sanitize_title(substr($path, strlen('ydelse/')));
+    if ($slug === '') {
+        return;
+    }
+    $service = get_page_by_path($slug, OBJECT, 'sts_service');
+    $page = get_page_by_path($slug);
+    if (!$service && !$page) {
+        return;
+    }
+    wp_safe_redirect($service ? sts_content_service_url($service) : get_permalink($page), 301);
+    exit;
+}
+add_action('template_redirect', 'sts_content_redirect_legacy_urls', 1);
+
+/* ── Service <-> page binding ──────────────────────────────────── */
+
+/**
+ * Ensures the service has a real front-end page, creating it with the STS
+ * service template when none exists.
+ */
+function sts_content_sync_service_page($service_id) {
+    $service = get_post($service_id);
+    if (!$service || $service->post_type !== 'sts_service') {
+        return 0;
+    }
+    $page = sts_content_service_page($service);
+    if ($page) {
+        $page_id = $page->ID;
+        if ($page->post_name !== $service->post_name) {
+            wp_update_post(array('ID' => $page_id, 'post_name' => $service->post_name));
+        }
+    } else {
+        $page_id = wp_insert_post(array(
+            'post_type' => 'page',
+            'post_status' => 'publish',
+            'post_title' => $service->post_title,
+            'post_name' => $service->post_name,
+            'post_content' => '',
+        ), true);
+        if (is_wp_error($page_id)) {
+            return 0;
+        }
+    }
+    sts_content_set_page_template($page_id, true);
+    update_post_meta($page_id, '_sts_service_id', $service_id);
+    update_post_meta($service_id, '_sts_service_page_id', $page_id);
+    return $page_id;
+}
+
+/* ── Import from the original static CMS ───────────────────────── */
+
+/**
+ * One-off migration: bind every service to its real page, copy the converted
+ * page content into the service fields and switch the page to the template.
+ */
+function sts_content_maybe_link_pages() {
+    if (get_option('sts_content_pages_linked') === STS_CONTENT_VERSION) {
+        return;
+    }
+    foreach (sts_content_get_services() as $service) {
+        sts_content_seed_service_from_theme($service->ID, true);
+        sts_content_sync_service_page($service->ID);
+    }
+    update_option('sts_content_pages_linked', STS_CONTENT_VERSION);
+}
+add_action('admin_init', 'sts_content_maybe_link_pages');
 
 function sts_content_original_file($name) {
     $path = ABSPATH . 'supertotalservice.dk/data/' . $name;
     return is_readable($path) ? $path : '';
 }
 
-function sts_content_original_media_url($path) {
+/**
+ * Stock images from the original CMS already exist as theme assets, so those
+ * paths resolve to the default image instead of a hard-coded custom URL.
+ */
+function sts_content_import_image($path) {
     $path = trim((string) $path);
-    if ($path === '') {
+    if ($path === '' || strpos($path, '/media/uploads/stock-images/') === 0) {
         return '';
     }
     if (preg_match('#^https?://#i', $path)) {
         return $path;
     }
     return home_url('/supertotalservice.dk/' . ltrim($path, '/'));
-}
-
-function sts_content_slug($value) {
-    return sanitize_title($value);
 }
 
 function sts_content_import_services() {
@@ -98,12 +233,13 @@ function sts_content_import_services() {
         if (is_wp_error($id)) {
             continue;
         }
-        update_post_meta($id, '_sts_service_id', sanitize_text_field($service['id'] ?? ''));
+        update_post_meta($id, '_sts_service_source_id', sanitize_text_field($service['id'] ?? ''));
         update_post_meta($id, '_sts_service_icon', sanitize_text_field($service['icon'] ?? ''));
         update_post_meta($id, '_sts_service_category', sanitize_key($service['category'] ?? ''));
         update_post_meta($id, '_sts_service_hero_title', sanitize_text_field($service['hero_title'] ?? ''));
-        update_post_meta($id, '_sts_service_image', esc_url_raw(sts_content_original_media_url($service['image'] ?? '')));
+        update_post_meta($id, '_sts_service_image', esc_url_raw(sts_content_import_image($service['image'] ?? '')));
         update_post_meta($id, '_sts_service_benefits', array_map('sanitize_text_field', (array) ($service['benefits'] ?? array())));
+
         $source_process = (array) ($service['process_section'] ?? array());
         $process = array(
             'eyebrow' => sanitize_text_field($source_process['eyebrow'] ?? ''),
@@ -117,6 +253,8 @@ function sts_content_import_services() {
             );
         }
         update_post_meta($id, '_sts_service_process', $process);
+
+        sts_content_sync_service_page($id);
         $count++;
     }
     return $count;
@@ -128,129 +266,3 @@ function sts_content_activate() {
     flush_rewrite_rules();
 }
 register_activation_hook(__FILE__, 'sts_content_activate');
-
-function sts_content_admin_menu() {
-    add_submenu_page('edit.php?post_type=sts_service', 'STS import', 'Importér original data', 'manage_options', 'sts-content-import', 'sts_content_import_page');
-}
-add_action('admin_menu', 'sts_content_admin_menu');
-
-function sts_content_import_page() {
-    if (!current_user_can('manage_options')) {
-        return;
-    }
-    $message = '';
-    if (isset($_POST['sts_import_nonce']) && wp_verify_nonce($_POST['sts_import_nonce'], 'sts_import')) {
-        $services = sts_content_import_services();
-        $message = sprintf('%d serviceydelser blev importeret.', $services);
-    }
-    ?>
-    <div class="wrap">
-        <h1>STS Content Manager</h1>
-        <p>Importer den originale sides serviceydelser til WordPress. Eksisterende poster med samme slug opdateres.</p>
-        <?php if ($message) : ?><div class="notice notice-success"><p><?php echo esc_html($message); ?></p></div><?php endif; ?>
-        <form method="post">
-            <?php wp_nonce_field('sts_import', 'sts_import_nonce'); ?>
-            <p><button class="button button-primary" type="submit">Importér / synkronisér original data</button></p>
-        </form>
-        <p>Redigér, slet eller opret serviceydelser under <a href="<?php echo esc_url(admin_url('edit.php?post_type=sts_service')); ?>">Serviceydelser</a>. Nyheder administreres af det separate STS News Manager-plugin.</p>
-    </div>
-    <?php
-}
-
-function sts_content_service_meta_box() {
-    add_meta_box('sts-service-details', 'STS serviceoplysninger', 'sts_content_service_meta_box_html', 'sts_service', 'normal', 'high');
-}
-add_action('add_meta_boxes', 'sts_content_service_meta_box');
-
-function sts_content_service_meta_box_html($post) {
-    wp_nonce_field('sts_service_meta', 'sts_service_meta_nonce');
-    $fields = array(
-        'icon' => get_post_meta($post->ID, '_sts_service_icon', true),
-        'category' => get_post_meta($post->ID, '_sts_service_category', true),
-        'hero_title' => get_post_meta($post->ID, '_sts_service_hero_title', true),
-        'image' => get_post_meta($post->ID, '_sts_service_image', true),
-        'benefits' => implode("\n", (array) get_post_meta($post->ID, '_sts_service_benefits', true)),
-    );
-    echo '<p><label><strong>Ikon</strong><br><input class="widefat" type="text" name="sts_service_icon" value="' . esc_attr($fields['icon']) . '"></label></p>';
-    echo '<p><label><strong>Kategori</strong><br><select class="widefat" name="sts_service_category">';
-    foreach (array('byg' => 'STS Byg', 'mal' => 'STS Mal', 'ren' => 'STS Ren') as $value => $label) {
-        echo '<option value="' . esc_attr($value) . '" ' . selected($fields['category'], $value, false) . '>' . esc_html($label) . '</option>';
-    }
-    echo '</select></label></p>';
-    echo '<p><label><strong>Hero-titel</strong><br><input class="widefat" type="text" name="sts_service_hero_title" value="' . esc_attr($fields['hero_title']) . '"></label></p>';
-    echo '<p><label><strong>Billede</strong><br><input class="widefat" id="sts-service-image" type="url" name="sts_service_image" value="' . esc_attr($fields['image']) . '"></label> <button type="button" class="button" id="sts-select-service-image">Vælg eller upload billede</button></p>';
-    if ($fields['image']) {
-        echo '<p><img src="' . esc_url($fields['image']) . '" alt="" style="max-width:260px;height:auto;display:block"></p>';
-    }
-    echo '<p><label><strong>Fordele, én pr. linje</strong><br><textarea class="widefat" rows="4" name="sts_service_benefits">' . esc_textarea($fields['benefits']) . '</textarea></label></p>';
-    $process = (array) get_post_meta($post->ID, '_sts_service_process', true);
-    echo '<hr><h3>Service Process Section</h3>';
-    echo '<p><label>Process eyebrow<br><input class="widefat" name="sts_service_process_eyebrow" value="' . esc_attr($process['eyebrow'] ?? '') . '"></label></p>';
-    echo '<p><label>Process titel<br><input class="widefat" name="sts_service_process_title" value="' . esc_attr($process['title'] ?? '') . '"></label></p>';
-    for ($step = 1; $step <= 4; $step++) {
-        echo '<p><strong>Box ' . $step . '</strong><br><label>Titel<br><input class="widefat" name="sts_service_process_step_' . $step . '_title" value="' . esc_attr($process['steps'][$step - 1]['title'] ?? '') . '"></label><br><label>Beskrivelse<br><textarea class="widefat" rows="2" name="sts_service_process_step_' . $step . '_description">' . esc_textarea($process['steps'][$step - 1]['description'] ?? '') . '</textarea></label></p>';
-    }
-    echo '<script>jQuery(function($){$("#sts-select-service-image").on("click",function(e){e.preventDefault();var frame=wp.media({title:"Vælg servicebillede",button:{text:"Brug billede"},multiple:false});frame.on("select",function(){var item=frame.state().get("selection").first().toJSON();$("#sts-service-image").val(item.url);});frame.open();});});</script>';
-}
-
-function sts_content_save_service_meta($post_id) {
-    if (!isset($_POST['sts_service_meta_nonce']) || !wp_verify_nonce($_POST['sts_service_meta_nonce'], 'sts_service_meta') || (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) || !current_user_can('edit_post', $post_id)) {
-        return;
-    }
-    update_post_meta($post_id, '_sts_service_icon', sanitize_text_field($_POST['sts_service_icon'] ?? ''));
-    update_post_meta($post_id, '_sts_service_category', sanitize_key($_POST['sts_service_category'] ?? ''));
-    update_post_meta($post_id, '_sts_service_hero_title', sanitize_text_field($_POST['sts_service_hero_title'] ?? ''));
-    update_post_meta($post_id, '_sts_service_image', esc_url_raw($_POST['sts_service_image'] ?? ''));
-    update_post_meta($post_id, '_sts_service_benefits', array_filter(array_map('sanitize_text_field', preg_split('/\r\n|\r|\n/', $_POST['sts_service_benefits'] ?? ''))));
-    $process = array(
-        'eyebrow' => sanitize_text_field($_POST['sts_service_process_eyebrow'] ?? ''),
-        'title' => sanitize_text_field($_POST['sts_service_process_title'] ?? ''),
-        'steps' => array(),
-    );
-    for ($step = 1; $step <= 4; $step++) {
-        $process['steps'][] = array(
-            'title' => sanitize_text_field($_POST['sts_service_process_step_' . $step . '_title'] ?? ''),
-            'description' => sanitize_textarea_field($_POST['sts_service_process_step_' . $step . '_description'] ?? ''),
-        );
-    }
-    update_post_meta($post_id, '_sts_service_process', $process);
-}
-add_action('save_post_sts_service', 'sts_content_save_service_meta');
-
-function sts_content_service_image($post_id) {
-    return get_post_meta($post_id, '_sts_service_image', true);
-}
-
-function sts_content_duplicate_row_action($actions, $post) {
-    if ($post->post_type === 'sts_service' && current_user_can('edit_post', $post->ID)) {
-        $url = wp_nonce_url(admin_url('admin-post.php?action=sts_content_duplicate&post_id=' . $post->ID), 'sts_content_duplicate_' . $post->ID);
-        $actions['sts_duplicate'] = '<a href="' . esc_url($url) . '">Duplikér</a>';
-    }
-    return $actions;
-}
-add_filter('post_row_actions', 'sts_content_duplicate_row_action', 10, 2);
-
-function sts_content_duplicate_service() {
-    $post_id = absint($_GET['post_id'] ?? 0);
-    if (!$post_id || !current_user_can('edit_post', $post_id) || !wp_verify_nonce($_GET['_wpnonce'] ?? '', 'sts_content_duplicate_' . $post_id)) {
-        wp_die('Ugyldig forespørgsel.');
-    }
-    $original = get_post($post_id);
-    $copy_id = wp_insert_post(array(
-        'post_type' => 'sts_service',
-        'post_status' => 'draft',
-        'post_title' => $original->post_title . ' (Kopi)',
-        'post_content' => $original->post_content,
-        'post_excerpt' => $original->post_excerpt,
-    ));
-    if ($copy_id && !is_wp_error($copy_id)) {
-        foreach (array('_sts_service_icon', '_sts_service_category', '_sts_service_hero_title', '_sts_service_image', '_sts_service_benefits', '_sts_service_process') as $key) {
-            update_post_meta($copy_id, $key, get_post_meta($post_id, $key, true));
-        }
-        wp_safe_redirect(admin_url('post.php?post=' . $copy_id . '&action=edit'));
-        exit;
-    }
-    wp_safe_redirect(admin_url('edit.php?post_type=sts_service'));
-    exit;
-}
-add_action('admin_post_sts_content_duplicate', 'sts_content_duplicate_service');

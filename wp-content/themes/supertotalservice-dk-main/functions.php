@@ -27,9 +27,13 @@ function sts_render_service_category_cards($category) {
     foreach ($services as $service) {
         $image = function_exists('sts_content_service_image') ? sts_content_service_image($service->ID) : '';
         $description = get_the_excerpt($service);
-        // Link to the designed page-<slug>.php page (post_name matches its slug), not the generic /ydelse/ CPT single view
-        $service_page = get_page_by_path($service->post_name);
-        $service_url = $service_page ? get_permalink($service_page) : home_url('/' . $service->post_name . '/');
+        // Link to the real front-end page (/<slug>/), never the CPT's own URL
+        if (function_exists('sts_content_service_url')) {
+            $service_url = sts_content_service_url($service);
+        } else {
+            $service_page = get_page_by_path($service->post_name);
+            $service_url = $service_page ? get_permalink($service_page) : home_url('/' . $service->post_name . '/');
+        }
         echo '<a class="service-card pillar-service-card" href="' . esc_url($service_url) . '">';
         if ($image) {
             echo '<img class="service-card-media" src="' . esc_url($image) . '" alt="' . esc_attr($service->post_title) . '" loading="lazy">';
