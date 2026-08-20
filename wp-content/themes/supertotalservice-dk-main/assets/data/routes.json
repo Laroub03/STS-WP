@@ -1,0 +1,172 @@
+{
+  "/hvem-er-sts": {
+    "title": "Hvem Er Sts",
+    "url": "/hvem-er-sts",
+    "slug": "hvem-er-sts"
+  },
+  "/asbest-og-nedrivning": {
+    "title": "Asbestsanering og nedrivning | Miljørigtig håndtering – STS ApS",
+    "url": "/asbest-og-nedrivning",
+    "slug": "asbest-og-nedrivning"
+  },
+  "/byggepladsservice": {
+    "title": "Byggepladsservice | Rengøring og support til byggeprojekter – STS ApS",
+    "url": "/byggepladsservice",
+    "slug": "byggepladsservice"
+  },
+  "/components/footer": {
+    "title": "Footer",
+    "url": "/components/footer",
+    "slug": "components-footer"
+  },
+  "/components/header": {
+    "title": "Header",
+    "url": "/components/header",
+    "slug": "components-header"
+  },
+  "/ejendomsservice": {
+    "title": "Ejendomsservice | Fast og fleksibel service til din ejendom – STS ApS",
+    "url": "/ejendomsservice",
+    "slug": "ejendomsservice"
+  },
+  "/epoxy-og-specialmaling": {
+    "title": "Epoxy og specialmaling - STS ApS",
+    "url": "/epoxy-og-specialmaling",
+    "slug": "epoxy-og-specialmaling"
+  },
+  "/erhvervsrengoering": {
+    "title": "STS ApS | Erhvervsrengoering",
+    "url": "/erhvervsrengoering",
+    "slug": "erhvervsrengoering"
+  },
+  "/facademaling": {
+    "title": "Facademaling - STS ApS",
+    "url": "/facademaling",
+    "slug": "facademaling"
+  },
+  "/gartnerservice": {
+    "title": "Gartnerservice | Vedligeholdelse af have og grønne arealer – STS ApS",
+    "url": "/gartnerservice",
+    "slug": "gartnerservice"
+  },
+  "/glatfoere-bekaempelse-snerydning-og-saltning": {
+    "title": "Snerydning og saltning | Glatførebekæmpelse til erhverv – STS ApS",
+    "url": "/glatfoere-bekaempelse-snerydning-og-saltning",
+    "slug": "glatfoere-bekaempelse-snerydning-og-saltning"
+  },
+  "/gulvbehandling": {
+    "title": "Gulvbehandling | Polering, lakering og vedligeholdelse af gulve – STS ApS",
+    "url": "/gulvbehandling",
+    "slug": "gulvbehandling"
+  },
+  "/haandvaerkere": {
+    "title": "Håndværkere til erhverv | Maler, murer, tømrer og gulvservice – STS ApS",
+    "url": "/haandvaerkere",
+    "slug": "haandvaerkere"
+  },
+  "/handelsbetingelser": {
+    "title": "Handelsbetingelser | STS ApS",
+    "url": "/handelsbetingelser",
+    "slug": "handelsbetingelser"
+  },
+  "/insta-800-certificeret-kontrol-og-inspektion": {
+    "title": "INSTA 800 Certificering | Kvalitetskontrol af rengøring – STS ApS",
+    "url": "/insta-800-certificeret-kontrol-og-inspektion",
+    "slug": "insta-800-certificeret-kontrol-og-inspektion"
+  },
+  "/kontakt": {
+    "title": "Kontakt STS ApS – Få et gratis og uforpligtende tilbud i dag",
+    "url": "/kontakt",
+    "slug": "kontakt"
+  },
+  "/maler": {
+    "title": "Maler til erhverv | Professionel malerservice i Danmark – STS ApS",
+    "url": "/maler",
+    "slug": "maler"
+  },
+  "/mandskabsudlejning": {
+    "title": "Mandskabsudlejning | Fleksibel arbejdskraft til erhverv – STS ApS",
+    "url": "/mandskabsudlejning",
+    "slug": "mandskabsudlejning"
+  },
+  "/murer": {
+    "title": "Murerarbejde til erhverv | Professionelle murere i Danmark – STS ApS",
+    "url": "/murer",
+    "slug": "murer"
+  },
+  "/nedrivningsservice": {
+    "title": "Nedrivningsservice | Professionel nedrivning til fast pris – STS ApS",
+    "url": "/nedrivningsservice",
+    "slug": "nedrivningsservice"
+  },
+  "/rengoering": {
+    "title": "Erhvervsrengøring | Professionel kontorrengøring og industririengøring – STS ApS",
+    "url": "/rengoering",
+    "slug": "rengoering"
+  },
+  "/rengoering-efter-haandvaerkere": {
+    "title": "Rengøring efter håndværkere | Slutrengøring af lokaler – STS ApS",
+    "url": "/rengoering-efter-haandvaerkere",
+    "slug": "rengoering-efter-haandvaerkere"
+  },
+  "/service": {
+    "title": "Serviceydelser | Erhvervsrengøring, håndværk og byggepladsservice - STS ApS",
+    "url": "/service",
+    "slug": "service"
+  },
+  "/spartelarbejde-og-filtopsaetning": {
+    "title": "Spartelarbejde og filtopsætning - STS ApS",
+    "url": "/spartelarbejde-og-filtopsaetning",
+    "slug": "spartelarbejde-og-filtopsaetning"
+  },
+  "/sts-byg": {
+    "title": "STS Byg | Byggepladsservice, nedrivning og håndværk - STS ApS",
+    "url": "/sts-byg",
+    "slug": "sts-byg"
+  },
+  "/sts-mal": {
+    "title": "STS Mal | Professionelle maler- og finishydelser - STS ApS",
+    "url": "/sts-mal",
+    "slug": "sts-mal"
+  },
+  "/sts-ren": {
+    "title": "STS Ren | Rengøring, drift og ejendomspleje - STS ApS",
+    "url": "/sts-ren",
+    "slug": "sts-ren"
+  },
+  "/toemrer": {
+    "title": "Tømrerarbejde til erhverv | Snedker og tømrer i Danmark – STS ApS",
+    "url": "/toemrer",
+    "slug": "toemrer"
+  },
+  "/trappeopgangsmaling": {
+    "title": "Trappeopgangsmaling - STS ApS",
+    "url": "/trappeopgangsmaling",
+    "slug": "trappeopgangsmaling"
+  },
+  "/velkommen/asbestarbejde-2": {
+    "title": "Asbestarbejde | Certificeret asbestsanering og miljøhåndtering – STS ApS",
+    "url": "/velkommen/asbestarbejde-2",
+    "slug": "velkommen-asbestarbejde-2"
+  },
+  "/vi-udfoerer-nedrivning-af-mink-farm-til-fast-pris": {
+    "title": "Nedrivning af minkfarm til fast pris | STS ApS",
+    "url": "/vi-udfoerer-nedrivning-af-mink-farm-til-fast-pris",
+    "slug": "vi-udfoerer-nedrivning-af-mink-farm-til-fast-pris"
+  },
+  "/vicevaertservice": {
+    "title": "Viceværtservice | Driftshænder til bolig- og erhvervsejendomme – STS ApS",
+    "url": "/vicevaertservice",
+    "slug": "vicevaertservice"
+  },
+  "/vinduespolering": {
+    "title": "Vinduespolering | Professionel vinduespolering til erhverv – STS ApS",
+    "url": "/vinduespolering",
+    "slug": "vinduespolering"
+  },
+  "/vinduespudsning-polering-afrens-m-v-tilbydes-baade-manuelt-med-rentvandsanlaeg": {
+    "title": "STS ApS | Vinduespudsning Polering Afrens M V Tilbydes Baade Manuelt Med Rentvandsanlaeg",
+    "url": "/vinduespudsning-polering-afrens-m-v-tilbydes-baade-manuelt-med-rentvandsanlaeg",
+    "slug": "vinduespudsning-polering-afrens-m-v-tilbydes-baade-manuelt-med-rentvandsanlaeg"
+  }
+}

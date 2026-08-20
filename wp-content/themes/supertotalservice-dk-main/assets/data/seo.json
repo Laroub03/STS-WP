@@ -1,0 +1,749 @@
+{
+  "/": {
+    "description": "STS ApS leverer professionel erhvervsservice, rengøring, håndværkertjenester og byggepladsservice i hele Danmark. INSTA 800 certificeret. Kontakt os for et gratis tilbud.",
+    "robots": "index, follow",
+    "og": {
+      "og:title": "STS ApS – Professionel erhvervsservice, rengøring og håndværk i Danmark",
+      "og:description": "STS ApS leverer professionel erhvervsservice, rengøring, håndværkertjenester og byggepladsservice i hele Danmark. INSTA 800 certificeret. Kontakt os for et gratis tilbud.",
+      "og:type": "website"
+    },
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "STS ApS",
+        "url": "https://supertotalservice.dk",
+        "telephone": "+4536302525",
+        "email": "mail@st-service.dk",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "DK"
+        },
+        "description": "STS ApS leverer professionel erhvervsservice, rengøring, håndværkertjenester og byggepladsservice i hele Danmark. INSTA 800 certificeret. Kontakt os for et gratis tilbud."
+      }
+    ],
+    "title": "STS ApS – Professionel erhvervsservice, rengøring og håndværk i Danmark"
+  },
+  "/hvem-er-sts": {
+    "description": "Lær STS ApS at kende. Vi er en erfaren servicevirksomhed med over 20 års erfaring inden for rengøring, håndværk og ejendomsservice i hele Danmark.",
+    "robots": "index, follow",
+    "og": {
+      "og:title": "Om STS ApS – 20 år med professionel erhvervsservice i Danmark",
+      "og:description": "Lær STS ApS at kende. Vi er en erfaren servicevirksomhed med over 20 års erfaring inden for rengøring, håndværk og ejendomsservice i hele Danmark.",
+      "og:type": "website"
+    },
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "STS ApS",
+        "url": "https://supertotalservice.dk",
+        "telephone": "+4536302525",
+        "email": "mail@st-service.dk",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "DK"
+        },
+        "description": "Lær STS ApS at kende. Vi er en erfaren servicevirksomhed med over 20 års erfaring inden for rengøring, håndværk og ejendomsservice i hele Danmark."
+      }
+    ],
+    "title": "Om STS ApS – 20 år med professionel erhvervsservice i Danmark"
+  },
+  "/asbest-og-nedrivning": {
+    "description": "STS ApS udfører sikker asbestsanering og nedrivning med dokumenteret miljøhåndtering og myndighedsgodkendte procedurer. Kontakt os for en vurdering.",
+    "robots": "index, follow",
+    "og": {
+      "og:title": "Asbestsanering og nedrivning | Miljørigtig håndtering – STS ApS",
+      "og:description": "STS ApS udfører sikker asbestsanering og nedrivning med dokumenteret miljøhåndtering og myndighedsgodkendte procedurer. Kontakt os for en vurdering.",
+      "og:type": "website"
+    },
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "STS ApS",
+        "url": "https://supertotalservice.dk",
+        "telephone": "+4536302525",
+        "email": "mail@st-service.dk",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "DK"
+        },
+        "description": "STS ApS udfører sikker asbestsanering og nedrivning med dokumenteret miljøhåndtering og myndighedsgodkendte procedurer. Kontakt os for en vurdering."
+      }
+    ],
+    "title": "Asbestsanering og nedrivning | Miljørigtig håndtering – STS ApS"
+  },
+  "/byggepladsservice": {
+    "description": "STS ApS tilbyder komplet byggepladsservice inkl. etablering, daglig rengøring, affaldshåndtering og afslutningsoprydning på byggepladser i hele Danmark.",
+    "robots": "index, follow",
+    "og": {
+      "og:title": "Byggepladsservice | Rengøring og support til byggeprojekter – STS ApS",
+      "og:description": "STS ApS tilbyder komplet byggepladsservice inkl. etablering, daglig rengøring, affaldshåndtering og afslutningsoprydning på byggepladser i hele Danmark.",
+      "og:type": "website"
+    },
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "STS ApS",
+        "url": "https://supertotalservice.dk",
+        "telephone": "+4536302525",
+        "email": "mail@st-service.dk",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "DK"
+        },
+        "description": "STS ApS tilbyder komplet byggepladsservice inkl. etablering, daglig rengøring, affaldshåndtering og afslutningsoprydning på byggepladser i hele Danmark."
+      }
+    ],
+    "title": "Byggepladsservice | Rengøring og support til byggeprojekter – STS ApS"
+  },
+  "/components/footer": {
+    "title": "Footer"
+  },
+  "/components/header": {
+    "title": "Header"
+  },
+  "/ejendomsservice": {
+    "description": "STS ApS tilbyder ejendomsservice til bolig- og erhvervsejendomme: rengøring af fælledsarealer, småreparationer, affaldshåndtering og tilsyn.",
+    "robots": "index, follow",
+    "og": {
+      "og:title": "Ejendomsservice | Fast og fleksibel service til din ejendom – STS ApS",
+      "og:description": "STS ApS tilbyder ejendomsservice til bolig- og erhvervsejendomme: rengøring af fælledsarealer, småreparationer, affaldshåndtering og tilsyn.",
+      "og:type": "website"
+    },
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "STS ApS",
+        "url": "https://supertotalservice.dk",
+        "telephone": "+4536302525",
+        "email": "mail@st-service.dk",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "DK"
+        },
+        "description": "STS ApS tilbyder ejendomsservice til bolig- og erhvervsejendomme: rengøring af fælledsarealer, småreparationer, affaldshåndtering og tilsyn."
+      }
+    ],
+    "title": "Ejendomsservice | Fast og fleksibel service til din ejendom – STS ApS"
+  },
+  "/epoxy-og-specialmaling": {
+    "description": "Specialiserede malerbehandlinger til gulve, tekniske rum og områder med særlige krav til slid og rengøring.",
+    "robots": "index, follow",
+    "og": {
+      "og:title": "Epoxy og specialmaling - STS ApS",
+      "og:description": "Specialiserede malerbehandlinger til gulve, tekniske rum og områder med særlige krav til slid og rengøring.",
+      "og:type": "website"
+    },
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "STS ApS",
+        "url": "https://supertotalservice.dk",
+        "telephone": "+4536302525",
+        "email": "mail@st-service.dk",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "DK"
+        },
+        "description": "Specialiserede malerbehandlinger til gulve, tekniske rum og områder med særlige krav til slid og rengøring."
+      }
+    ],
+    "title": "Epoxy og specialmaling - STS ApS"
+  },
+  "/erhvervsrengoering": {
+    "description": "STS tilbyder moderne serviceydelser til erhverv, ejendomme og byggeprojekter.",
+    "title": "STS ApS | Erhvervsrengoering"
+  },
+  "/facademaling": {
+    "description": "Udvendig facademaling til erhvervsejendomme, boligforeninger og institutioner med fokus på holdbarhed og helhedsindtryk.",
+    "robots": "index, follow",
+    "og": {
+      "og:title": "Facademaling - STS ApS",
+      "og:description": "Udvendig facademaling til erhvervsejendomme, boligforeninger og institutioner med fokus på holdbarhed og helhedsindtryk.",
+      "og:type": "website"
+    },
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "STS ApS",
+        "url": "https://supertotalservice.dk",
+        "telephone": "+4536302525",
+        "email": "mail@st-service.dk",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "DK"
+        },
+        "description": "Udvendig facademaling til erhvervsejendomme, boligforeninger og institutioner med fokus på holdbarhed og helhedsindtryk."
+      }
+    ],
+    "title": "Facademaling - STS ApS"
+  },
+  "/gartnerservice": {
+    "description": "STS ApS tilbyder gartnerservice til erhvervsejendomme: græsslåning, hækklipning, beplantning, oprydning og vedligeholdelse af grønne arealer året rundt.",
+    "robots": "index, follow",
+    "og": {
+      "og:title": "Gartnerservice | Vedligeholdelse af have og grønne arealer – STS ApS",
+      "og:description": "STS ApS tilbyder gartnerservice til erhvervsejendomme: græsslåning, hækklipning, beplantning, oprydning og vedligeholdelse af grønne arealer året rundt.",
+      "og:type": "website"
+    },
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "STS ApS",
+        "url": "https://supertotalservice.dk",
+        "telephone": "+4536302525",
+        "email": "mail@st-service.dk",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "DK"
+        },
+        "description": "STS ApS tilbyder gartnerservice til erhvervsejendomme: græsslåning, hækklipning, beplantning, oprydning og vedligeholdelse af grønne arealer året rundt."
+      }
+    ],
+    "title": "Gartnerservice | Vedligeholdelse af have og grønne arealer – STS ApS"
+  },
+  "/glatfoere-bekaempelse-snerydning-og-saltning": {
+    "description": "STS ApS tilbyder professionel snerydning, saltning og glatførebekæmpelse til erhvervsejendomme og boligselskaber. Vi er klar døgnet rundt i vintermånederne.",
+    "robots": "index, follow",
+    "og": {
+      "og:title": "Snerydning og saltning | Glatførebekæmpelse til erhverv – STS ApS",
+      "og:description": "STS ApS tilbyder professionel snerydning, saltning og glatførebekæmpelse til erhvervsejendomme og boligselskaber. Vi er klar døgnet rundt i vintermånederne.",
+      "og:type": "website"
+    },
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "STS ApS",
+        "url": "https://supertotalservice.dk",
+        "telephone": "+4536302525",
+        "email": "mail@st-service.dk",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "DK"
+        },
+        "description": "STS ApS tilbyder professionel snerydning, saltning og glatførebekæmpelse til erhvervsejendomme og boligselskaber. Vi er klar døgnet rundt i vintermånederne."
+      }
+    ],
+    "title": "Snerydning og saltning | Glatførebekæmpelse til erhverv – STS ApS"
+  },
+  "/gulvbehandling": {
+    "description": "STS ApS udfører gulvbehandling til erhverv: polering, lakering, rengøring og vedligeholdelse af alle typer gulve. Hurtig og effektiv service.",
+    "robots": "index, follow",
+    "og": {
+      "og:title": "Gulvbehandling | Polering, lakering og vedligeholdelse af gulve – STS ApS",
+      "og:description": "STS ApS udfører gulvbehandling til erhverv: polering, lakering, rengøring og vedligeholdelse af alle typer gulve. Hurtig og effektiv service.",
+      "og:type": "website"
+    },
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "STS ApS",
+        "url": "https://supertotalservice.dk",
+        "telephone": "+4536302525",
+        "email": "mail@st-service.dk",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "DK"
+        },
+        "description": "STS ApS udfører gulvbehandling til erhverv: polering, lakering, rengøring og vedligeholdelse af alle typer gulve. Hurtig og effektiv service."
+      }
+    ],
+    "title": "Gulvbehandling | Polering, lakering og vedligeholdelse af gulve – STS ApS"
+  },
+  "/haandvaerkere": {
+    "description": "STS ApS tilbyder professionelle håndværkerydelser til erhverv: maler, murer, tømrer, gulvbehandling og reparationer. Hurtig mobilisering og klar aftale.",
+    "robots": "index, follow",
+    "og": {
+      "og:title": "Håndværkere til erhverv | Maler, murer, tømrer og gulvservice – STS ApS",
+      "og:description": "STS ApS tilbyder professionelle håndværkerydelser til erhverv: maler, murer, tømrer, gulvbehandling og reparationer. Hurtig mobilisering og klar aftale.",
+      "og:type": "website"
+    },
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "STS ApS",
+        "url": "https://supertotalservice.dk",
+        "telephone": "+4536302525",
+        "email": "mail@st-service.dk",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "DK"
+        },
+        "description": "STS ApS tilbyder professionelle håndværkerydelser til erhverv: maler, murer, tømrer, gulvbehandling og reparationer. Hurtig mobilisering og klar aftale."
+      }
+    ],
+    "title": "Håndværkere til erhverv | Maler, murer, tømrer og gulvservice – STS ApS"
+  },
+  "/handelsbetingelser": {
+    "description": "Læs STS ApS' handelsbetingelser for levering af serviceydelser, betaling og ansvar.",
+    "robots": "index, follow",
+    "og": {
+      "og:title": "Handelsbetingelser | STS ApS",
+      "og:description": "Læs STS ApS' handelsbetingelser for levering af serviceydelser, betaling og ansvar.",
+      "og:type": "website"
+    },
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "STS ApS",
+        "url": "https://supertotalservice.dk",
+        "telephone": "+4536302525",
+        "email": "mail@st-service.dk",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "DK"
+        },
+        "description": "Læs STS ApS' handelsbetingelser for levering af serviceydelser, betaling og ansvar."
+      }
+    ],
+    "title": "Handelsbetingelser | STS ApS"
+  },
+  "/insta-800-certificeret-kontrol-og-inspektion": {
+    "description": "STS ApS er INSTA 800 certificeret og udfører kontrol og inspektion af rengøringskvalitet efter den nordiske standard. Dokumenteret og objektivt målt.",
+    "robots": "index, follow",
+    "og": {
+      "og:title": "INSTA 800 Certificering | Kvalitetskontrol af rengøring – STS ApS",
+      "og:description": "STS ApS er INSTA 800 certificeret og udfører kontrol og inspektion af rengøringskvalitet efter den nordiske standard. Dokumenteret og objektivt målt.",
+      "og:type": "website"
+    },
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "STS ApS",
+        "url": "https://supertotalservice.dk",
+        "telephone": "+4536302525",
+        "email": "mail@st-service.dk",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "DK"
+        },
+        "description": "STS ApS er INSTA 800 certificeret og udfører kontrol og inspektion af rengøringskvalitet efter den nordiske standard. Dokumenteret og objektivt målt."
+      }
+    ],
+    "title": "INSTA 800 Certificering | Kvalitetskontrol af rengøring – STS ApS"
+  },
+  "/kontakt": {
+    "description": "Kontakt STS ApS for et gratis og uforpligtende tilbud på rengøring, håndværk, byggepladsservice eller asbestsanering. Vi svarer inden for en arbejdsdag.",
+    "robots": "index, follow",
+    "og": {
+      "og:title": "Kontakt STS ApS – Få et gratis og uforpligtende tilbud i dag",
+      "og:description": "Kontakt STS ApS for et gratis og uforpligtende tilbud på rengøring, håndværk, byggepladsservice eller asbestsanering. Vi svarer inden for en arbejdsdag.",
+      "og:type": "website"
+    },
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "STS ApS",
+        "url": "https://supertotalservice.dk",
+        "telephone": "+4536302525",
+        "email": "mail@st-service.dk",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Krondalvej 8",
+          "postalCode": "2610",
+          "addressLocality": "Rødovre",
+          "addressCountry": "DK"
+        },
+        "description": "Kontakt STS ApS for et gratis og uforpligtende tilbud på rengøring, håndværk, byggepladsservice eller asbestsanering. Vi svarer inden for en arbejdsdag."
+      }
+    ],
+    "title": "Kontakt STS ApS – Få et gratis og uforpligtende tilbud i dag"
+  },
+  "/maler": {
+    "description": "STS ApS udfører malerarbejde til erhverv: indvendig og udvendig maling, tapetsering, grunding og overfladebehandling. Hurtig og præcis leverance.",
+    "robots": "index, follow",
+    "og": {
+      "og:title": "Maler til erhverv | Professionel malerservice i Danmark – STS ApS",
+      "og:description": "STS ApS udfører malerarbejde til erhverv: indvendig og udvendig maling, tapetsering, grunding og overfladebehandling. Hurtig og præcis leverance.",
+      "og:type": "website"
+    },
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "STS ApS",
+        "url": "https://supertotalservice.dk",
+        "telephone": "+4536302525",
+        "email": "mail@st-service.dk",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "DK"
+        },
+        "description": "STS ApS udfører malerarbejde til erhverv: indvendig og udvendig maling, tapetsering, grunding og overfladebehandling. Hurtig og præcis leverance."
+      }
+    ],
+    "title": "Maler til erhverv | Professionel malerservice i Danmark – STS ApS"
+  },
+  "/mandskabsudlejning": {
+    "description": "STS ApS tilbyder mandskabsudlejning til erhverv: erfarne medarbejdere til rengøring, lager, produktion og byggeprojekter. Hurtig mobilisering og pålidelig bemanding.",
+    "robots": "index, follow",
+    "og": {
+      "og:title": "Mandskabsudlejning | Fleksibel arbejdskraft til erhverv – STS ApS",
+      "og:description": "STS ApS tilbyder mandskabsudlejning til erhverv: erfarne medarbejdere til rengøring, lager, produktion og byggeprojekter. Hurtig mobilisering og pålidelig bemanding.",
+      "og:type": "website"
+    },
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "STS ApS",
+        "url": "https://supertotalservice.dk",
+        "telephone": "+4536302525",
+        "email": "mail@st-service.dk",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "DK"
+        },
+        "description": "STS ApS tilbyder mandskabsudlejning til erhverv: erfarne medarbejdere til rengøring, lager, produktion og byggeprojekter. Hurtig mobilisering og pålidelig bemanding."
+      }
+    ],
+    "title": "Mandskabsudlejning | Fleksibel arbejdskraft til erhverv – STS ApS"
+  },
+  "/murer": {
+    "description": "STS ApS udfører murerarbejde til erhverv og ejendomme: reparation, renovering, udstøbning, flisearbejde og meget mere. Kompetente murere, fast pris.",
+    "robots": "index, follow",
+    "og": {
+      "og:title": "Murerarbejde til erhverv | Professionelle murere i Danmark – STS ApS",
+      "og:description": "STS ApS udfører murerarbejde til erhverv og ejendomme: reparation, renovering, udstøbning, flisearbejde og meget mere. Kompetente murere, fast pris.",
+      "og:type": "website"
+    },
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "STS ApS",
+        "url": "https://supertotalservice.dk",
+        "telephone": "+4536302525",
+        "email": "mail@st-service.dk",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "DK"
+        },
+        "description": "STS ApS udfører murerarbejde til erhverv og ejendomme: reparation, renovering, udstøbning, flisearbejde og meget mere. Kompetente murere, fast pris."
+      }
+    ],
+    "title": "Murerarbejde til erhverv | Professionelle murere i Danmark – STS ApS"
+  },
+  "/nedrivningsservice": {
+    "description": "STS ApS udfører nedrivningsservice for erhverv og kommuner: selektiv nedrivning, totalrivning, genbrugssortring og miljørigtig bortskaffelse.",
+    "robots": "index, follow",
+    "og": {
+      "og:title": "Nedrivningsservice | Professionel nedrivning til fast pris – STS ApS",
+      "og:description": "STS ApS udfører nedrivningsservice for erhverv og kommuner: selektiv nedrivning, totalrivning, genbrugssortring og miljørigtig bortskaffelse.",
+      "og:type": "website"
+    },
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "STS ApS",
+        "url": "https://supertotalservice.dk",
+        "telephone": "+4536302525",
+        "email": "mail@st-service.dk",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "DK"
+        },
+        "description": "STS ApS udfører nedrivningsservice for erhverv og kommuner: selektiv nedrivning, totalrivning, genbrugssortring og miljørigtig bortskaffelse."
+      }
+    ],
+    "title": "Nedrivningsservice | Professionel nedrivning til fast pris – STS ApS"
+  },
+  "/rengoering": {
+    "description": "STS ApS leverer professionel erhvervsrengøring til kontorer, industri og butikker i hele Danmark. Faste teams, fleksible aftaler og INSTA 800 dokumenteret kvalitet.",
+    "robots": "index, follow",
+    "og": {
+      "og:title": "Erhvervsrengøring | Professionel kontorrengøring og industririengøring – STS ApS",
+      "og:description": "STS ApS leverer professionel erhvervsrengøring til kontorer, industri og butikker i hele Danmark. Faste teams, fleksible aftaler og INSTA 800 dokumenteret kvalitet.",
+      "og:type": "website"
+    },
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "STS ApS",
+        "url": "https://supertotalservice.dk",
+        "telephone": "+4536302525",
+        "email": "mail@st-service.dk",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "DK"
+        },
+        "description": "STS ApS leverer professionel erhvervsrengøring til kontorer, industri og butikker i hele Danmark. Faste teams, fleksible aftaler og INSTA 800 dokumenteret kvalitet."
+      }
+    ],
+    "title": "Erhvervsrengøring | Professionel kontorrengøring og industririengøring – STS ApS"
+  },
+  "/rengoering-efter-haandvaerkere": {
+    "description": "STS ApS udfører grundig slutrengøring og rengøring efter håndværkere. Vi fjerner støv, snavs og byggeaffald og afleverer lokalerne klar til brug.",
+    "robots": "index, follow",
+    "og": {
+      "og:title": "Rengøring efter håndværkere | Slutrengøring af lokaler – STS ApS",
+      "og:description": "STS ApS udfører grundig slutrengøring og rengøring efter håndværkere. Vi fjerner støv, snavs og byggeaffald og afleverer lokalerne klar til brug.",
+      "og:type": "website"
+    },
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "STS ApS",
+        "url": "https://supertotalservice.dk",
+        "telephone": "+4536302525",
+        "email": "mail@st-service.dk",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "DK"
+        },
+        "description": "STS ApS udfører grundig slutrengøring og rengøring efter håndværkere. Vi fjerner støv, snavs og byggeaffald og afleverer lokalerne klar til brug."
+      }
+    ],
+    "title": "Rengøring efter håndværkere | Slutrengøring af lokaler – STS ApS"
+  },
+  "/service": {
+    "description": "Overblik over alle ydelser fra STS ApS: erhvervsrengøring, håndværk, asbestsanering, byggepladsservice, mandskabsudlejning og meget mere.",
+    "robots": "index, follow",
+    "og": {
+      "og:title": "Serviceydelser | Erhvervsrengøring, håndværk og byggepladsservice - STS ApS",
+      "og:description": "Overblik over alle ydelser fra STS ApS: erhvervsrengøring, håndværk, asbestsanering, byggepladsservice, mandskabsudlejning og meget mere.",
+      "og:type": "website"
+    },
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "STS ApS",
+        "url": "https://supertotalservice.dk",
+        "telephone": "+4536302525",
+        "email": "mail@st-service.dk",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "DK"
+        },
+        "description": "Overblik over alle ydelser fra STS ApS: erhvervsrengøring, håndværk, asbestsanering, byggepladsservice, mandskabsudlejning og meget mere."
+      }
+    ],
+    "title": "Serviceydelser | Erhvervsrengøring, håndværk og byggepladsservice - STS ApS"
+  },
+  "/spartelarbejde-og-filtopsaetning": {
+    "description": "Klargøring af vægge og lofter med spartelarbejde og filtopsætning før maling i kontorer, opgange og erhvervslokaler.",
+    "robots": "index, follow",
+    "og": {
+      "og:title": "Spartelarbejde og filtopsætning - STS ApS",
+      "og:description": "Klargøring af vægge og lofter med spartelarbejde og filtopsætning før maling i kontorer, opgange og erhvervslokaler.",
+      "og:type": "website"
+    },
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "STS ApS",
+        "url": "https://supertotalservice.dk",
+        "telephone": "+4536302525",
+        "email": "mail@st-service.dk",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "DK"
+        },
+        "description": "Klargøring af vægge og lofter med spartelarbejde og filtopsætning før maling i kontorer, opgange og erhvervslokaler."
+      }
+    ],
+    "title": "Spartelarbejde og filtopsætning - STS ApS"
+  },
+  "/sts-byg": {
+    "description": "STS Byg samler byggepladsservice, nedrivning, murer- og tømrerarbejde samt bemanding til professionelle projekter.",
+    "robots": "index, follow",
+    "og": {
+      "og:title": "STS Byg | Byggepladsservice, nedrivning og håndværk - STS ApS",
+      "og:description": "STS Byg samler byggepladsservice, nedrivning, murer- og tømrerarbejde samt bemanding til professionelle projekter.",
+      "og:type": "website"
+    },
+    "title": "STS Byg | Byggepladsservice, nedrivning og håndværk - STS ApS"
+  },
+  "/sts-mal": {
+    "description": "STS Mal samler professionelle maler- og finishydelser til erhverv, ejendomme og renoveringsprojekter.",
+    "robots": "index, follow",
+    "og": {
+      "og:title": "STS Mal | Professionelle maler- og finishydelser - STS ApS",
+      "og:description": "STS Mal samler professionelle maler- og finishydelser til erhverv, ejendomme og renoveringsprojekter.",
+      "og:type": "website"
+    },
+    "title": "STS Mal | Professionelle maler- og finishydelser - STS ApS"
+  },
+  "/sts-ren": {
+    "description": "STS Ren samler rengøring, ejendomsdrift og pleje af professionelle omgivelser for virksomheder og ejendomme.",
+    "robots": "index, follow",
+    "og": {
+      "og:title": "STS Ren | Rengøring, drift og ejendomspleje - STS ApS",
+      "og:description": "STS Ren samler rengøring, ejendomsdrift og pleje af professionelle omgivelser for virksomheder og ejendomme.",
+      "og:type": "website"
+    },
+    "title": "STS Ren | Rengøring, drift og ejendomspleje - STS ApS"
+  },
+  "/toemrer": {
+    "description": "STS ApS udfører tømrerarbejde til erhverv: opsætning, reparation, døre og vinduer, lofter, gulve og trækonstruktioner. Kompetente tømrere, fast pris.",
+    "robots": "index, follow",
+    "og": {
+      "og:title": "Tømrerarbejde til erhverv | Snedker og tømrer i Danmark – STS ApS",
+      "og:description": "STS ApS udfører tømrerarbejde til erhverv: opsætning, reparation, døre og vinduer, lofter, gulve og trækonstruktioner. Kompetente tømrere, fast pris.",
+      "og:type": "website"
+    },
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "STS ApS",
+        "url": "https://supertotalservice.dk",
+        "telephone": "+4536302525",
+        "email": "mail@st-service.dk",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "DK"
+        },
+        "description": "STS ApS udfører tømrerarbejde til erhverv: opsætning, reparation, døre og vinduer, lofter, gulve og trækonstruktioner. Kompetente tømrere, fast pris."
+      }
+    ],
+    "title": "Tømrerarbejde til erhverv | Snedker og tømrer i Danmark – STS ApS"
+  },
+  "/trappeopgangsmaling": {
+    "description": "Maling og opfriskning af trappeopgange og fællesarealer med slidstærke produkter og pæn afslutning.",
+    "robots": "index, follow",
+    "og": {
+      "og:title": "Trappeopgangsmaling - STS ApS",
+      "og:description": "Maling og opfriskning af trappeopgange og fællesarealer med slidstærke produkter og pæn afslutning.",
+      "og:type": "website"
+    },
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "STS ApS",
+        "url": "https://supertotalservice.dk",
+        "telephone": "+4536302525",
+        "email": "mail@st-service.dk",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "DK"
+        },
+        "description": "Maling og opfriskning af trappeopgange og fællesarealer med slidstærke produkter og pæn afslutning."
+      }
+    ],
+    "title": "Trappeopgangsmaling - STS ApS"
+  },
+  "/velkommen/asbestarbejde-2": {
+    "description": "STS ApS udfører certficeret asbestarbejde med fokus på sikkerhed, miljø og dokumentation. Vi håndterer alle typer asbestholdige materialer korrekt.",
+    "robots": "index, follow",
+    "og": {
+      "og:title": "Asbestarbejde | Certificeret asbestsanering og miljøhåndtering – STS ApS",
+      "og:description": "STS ApS udfører certficeret asbestarbejde med fokus på sikkerhed, miljø og dokumentation. Vi håndterer alle typer asbestholdige materialer korrekt.",
+      "og:type": "website"
+    },
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "STS ApS",
+        "url": "https://supertotalservice.dk",
+        "telephone": "+4536302525",
+        "email": "mail@st-service.dk",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "DK"
+        },
+        "description": "STS ApS udfører certficeret asbestarbejde med fokus på sikkerhed, miljø og dokumentation. Vi håndterer alle typer asbestholdige materialer korrekt."
+      }
+    ],
+    "title": "Asbestarbejde | Certificeret asbestsanering og miljøhåndtering – STS ApS"
+  },
+  "/vi-udfoerer-nedrivning-af-mink-farm-til-fast-pris": {
+    "description": "STS ApS tilbyder nedrivning af minkfarme til fast pris. Vi håndterer kortlægning, miljøhåndtering, nedrivning og bortskaffelse – komplet og dokumenteret.",
+    "robots": "index, follow",
+    "og": {
+      "og:title": "Nedrivning af minkfarm til fast pris | STS ApS",
+      "og:description": "STS ApS tilbyder nedrivning af minkfarme til fast pris. Vi håndterer kortlægning, miljøhåndtering, nedrivning og bortskaffelse – komplet og dokumenteret.",
+      "og:type": "website"
+    },
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "STS ApS",
+        "url": "https://supertotalservice.dk",
+        "telephone": "+4536302525",
+        "email": "mail@st-service.dk",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "DK"
+        },
+        "description": "STS ApS tilbyder nedrivning af minkfarme til fast pris. Vi håndterer kortlægning, miljøhåndtering, nedrivning og bortskaffelse – komplet og dokumenteret."
+      }
+    ],
+    "title": "Nedrivning af minkfarm til fast pris | STS ApS"
+  },
+  "/vicevaertservice": {
+    "description": "STS ApS tilbyder viceværtservice til bolig- og erhvervsejendomme: daglige driftsopgaver, småreparationer, affaldshåndtering og beboerkontakt.",
+    "robots": "index, follow",
+    "og": {
+      "og:title": "Viceværtservice | Driftshænder til bolig- og erhvervsejendomme – STS ApS",
+      "og:description": "STS ApS tilbyder viceværtservice til bolig- og erhvervsejendomme: daglige driftsopgaver, småreparationer, affaldshåndtering og beboerkontakt.",
+      "og:type": "website"
+    },
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "STS ApS",
+        "url": "https://supertotalservice.dk",
+        "telephone": "+4536302525",
+        "email": "mail@st-service.dk",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "DK"
+        },
+        "description": "STS ApS tilbyder viceværtservice til bolig- og erhvervsejendomme: daglige driftsopgaver, småreparationer, affaldshåndtering og beboerkontakt."
+      }
+    ],
+    "title": "Viceværtservice | Driftshænder til bolig- og erhvervsejendomme – STS ApS"
+  },
+  "/vinduespolering": {
+    "description": "STS ApS udfører professionel vinduespolering til erhverv med rentvandssystem og manuel polering. Blærfri og stribefri resultat til kontorer og butikker.",
+    "robots": "index, follow",
+    "og": {
+      "og:title": "Vinduespolering | Professionel vinduespolering til erhverv – STS ApS",
+      "og:description": "STS ApS udfører professionel vinduespolering til erhverv med rentvandssystem og manuel polering. Blærfri og stribefri resultat til kontorer og butikker.",
+      "og:type": "website"
+    },
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "STS ApS",
+        "url": "https://supertotalservice.dk",
+        "telephone": "+4536302525",
+        "email": "mail@st-service.dk",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "DK"
+        },
+        "description": "STS ApS udfører professionel vinduespolering til erhverv med rentvandssystem og manuel polering. Blærfri og stribefri resultat til kontorer og butikker."
+      }
+    ],
+    "title": "Vinduespolering | Professionel vinduespolering til erhverv – STS ApS"
+  },
+  "/vinduespudsning-polering-afrens-m-v-tilbydes-baade-manuelt-med-rentvandsanlaeg": {
+    "description": "STS tilbyder moderne serviceydelser til erhverv, ejendomme og byggeprojekter.",
+    "title": "STS ApS | Vinduespudsning Polering Afrens M V Tilbydes Baade Manuelt Med Rentvandsanlaeg"
+  }
+}

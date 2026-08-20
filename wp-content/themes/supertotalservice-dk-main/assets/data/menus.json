@@ -1,0 +1,138 @@
+{
+  "primary": {
+    "location": "primary",
+    "items": [
+      {
+        "title": "Forside",
+        "url": "/",
+        "classes": [],
+        "attributes": {
+          "href": "index.html",
+          "aria-current": "page"
+        },
+        "children": [],
+        "isButton": false
+      },
+      {
+        "title": "Service",
+        "url": "/service/",
+        "classes": [],
+        "attributes": {
+          "href": "service/index.html"
+        },
+        "children": [],
+        "isButton": false
+      },
+      {
+        "title": "Nyheder",
+        "url": "/blog",
+        "classes": [],
+        "attributes": {
+          "href": "blog"
+        },
+        "children": [],
+        "isButton": false
+      },
+      {
+        "title": "Om os",
+        "url": "/hvem-er-sts/",
+        "classes": [],
+        "attributes": {
+          "href": "hvem-er-sts/index.html"
+        },
+        "children": [],
+        "isButton": false
+      },
+      {
+        "title": "Kontakt",
+        "url": "/kontakt/",
+        "classes": [],
+        "attributes": {
+          "href": "kontakt/index.html"
+        },
+        "children": [],
+        "isButton": false
+      },
+      {
+        "title": "Få et tilbud",
+        "url": "/kontakt/",
+        "classes": ["btn", "btn-primary"],
+        "attributes": {
+          "href": "kontakt/index.html"
+        },
+        "children": [],
+        "isButton": true,
+        "wpcId": "wpc_navbtn_d98b28c5c5"
+      }
+    ],
+    "ulClasses": [],
+    "submenuClass": "submenu",
+    "classes": "site-nav",
+    "depth": 1,
+    "attributes": {
+      "aria-label": "Primær navigation"
+    },
+    "isFlatNav": true,
+    "navContainerClasses": "site-nav",
+    "baseLinkClasses": "",
+    "activeLinkClasses": "",
+    "activeStateClass": "",
+    "activeStateTarget": "",
+    "inactiveLinkClasses": "",
+    "navActiveUnderline": null,
+    "navIconStroke": "",
+    "locales": [],
+    "defaultLocale": "",
+    "ulId": "",
+    "mobileLinkClasses": "",
+    "mobileContainerClasses": ""
+  },
+  "footer": {
+    "location": "footer",
+    "items": [
+      {
+        "title": "Alle ydelser",
+        "url": "/service/",
+        "classes": [],
+        "attributes": {
+          "href": "/service/index.html"
+        },
+        "children": []
+      },
+      {
+        "title": "Om STS ApS",
+        "url": "/hvem-er-sts/",
+        "classes": [],
+        "attributes": {
+          "href": "/hvem-er-sts/index.html"
+        },
+        "children": []
+      },
+      {
+        "title": "Kontakt os",
+        "url": "/kontakt/",
+        "classes": [],
+        "attributes": {
+          "href": "/kontakt/index.html"
+        },
+        "children": []
+      },
+      {
+        "title": "Handelsbetingelser",
+        "url": "/handelsbetingelser/",
+        "classes": [],
+        "attributes": {
+          "href": "/handelsbetingelser/index.html"
+        },
+        "children": []
+      }
+    ],
+    "ulClasses": "menu",
+    "submenuClass": "submenu",
+    "classes": "",
+    "depth": 1,
+    "attributes": {},
+    "locales": [],
+    "defaultLocale": ""
+  }
+}
