@@ -8,7 +8,7 @@ get_header(); ?>
     <div class="page-content">
         <div class="section-hero"><div class="hero-blue service-hero" id="hero">
   <div class="container">
-    <span class="eyebrow" data-wpc-id="wpc_2517df3fd5" data-wpc-editable="text">🏗️ Byggepladsservice</span>
+    <span class="eyebrow" data-wpc-id="wpc_2517df3fd5" data-wpc-editable="text">Byggepladsservice</span>
     <h1 data-wpc-id="wpc_69cca7dcd2" data-wpc-editable="heading">Professionel byggepladsservice fra start til slut</h1>
     <p data-wpc-id="wpc_3605ff201c" data-wpc-editable="text">En velorganiseret og ren byggeplads er en sikker og produktiv byggeplads. STS leverer alle serviceelementer under et tag – så I kan fokusere på at bygge.</p>
     <div style="margin-top:1.5rem">

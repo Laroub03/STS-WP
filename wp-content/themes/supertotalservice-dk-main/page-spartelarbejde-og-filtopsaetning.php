@@ -8,7 +8,7 @@ get_header(); ?>
     <div class="page-content">
         <div class="section-hero"><div class="hero-indigo service-hero" id="hero">
     <div class="container">
-        <span class="eyebrow" data-wpc-id="wpc_4b3a85b8d2" data-wpc-editable="text">🪜 Spartelarbejde og filtopsætning</span>
+        <span class="eyebrow" data-wpc-id="wpc_4b3a85b8d2" data-wpc-editable="text">Spartelarbejde og filtopsætning</span>
         <h1 data-wpc-id="wpc_f88c677061" data-wpc-editable="heading">Spartelarbejde og filtopsætning</h1>
         <p data-wpc-id="wpc_36c7639d05" data-wpc-editable="text">Klargøring af vægge og lofter med spartelarbejde og filtopsætning før maling i kontorer, opgange og erhvervslokaler.</p>
         <div style="margin-top:1.5rem">

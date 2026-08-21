@@ -8,7 +8,7 @@ get_header(); ?>
     <div class="page-content">
         <div class="section-hero"><div class="hero-indigo service-hero" id="hero">
   <div class="container">
-    <span class="eyebrow" data-wpc-id="wpc_2008dd8c29" data-wpc-editable="text">🏢 Ejendomsservice</span>
+    <span class="eyebrow" data-wpc-id="wpc_2008dd8c29" data-wpc-editable="text">Ejendomsservice</span>
     <h1 data-wpc-id="wpc_5933ca8b96" data-wpc-editable="heading">Professionel ejendomsservice til bolig- og erhvervsejendomme</h1>
     <p data-wpc-id="wpc_1a8359b589" data-wpc-editable="text">En velplejede ejendom beværer sin værdi og tiltrækker tilfredse lejere og beboere. STS leverer komplet ejendomsservice med en fast kontaktperson og fleksibel aftalestruktur.</p>
     <div style="margin-top:1.5rem">

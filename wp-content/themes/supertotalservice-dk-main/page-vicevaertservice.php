@@ -8,7 +8,7 @@ get_header(); ?>
     <div class="page-content">
         <div class="section-hero"><div class="hero-indigo service-hero" id="hero">
   <div class="container">
-    <span class="eyebrow" data-wpc-id="wpc_890b87b6c8" data-wpc-editable="text">🏠 Viceværtservice</span>
+    <span class="eyebrow" data-wpc-id="wpc_890b87b6c8" data-wpc-editable="text">Viceværtservice</span>
     <h1 data-wpc-id="wpc_9fb6c49c92" data-wpc-editable="heading">Professionel viceværtservice til ejendomme og boligselskaber</h1>
     <p data-wpc-id="wpc_4974a9c0ca" data-wpc-editable="text">En dygtig vicevært er fundamentet for en velfungerende ejendom. STS leverer professionel viceværtservice der sikrer ejendommens daglige drift, trivsel og vedligeholdelse.</p>
     <div style="margin-top:1.5rem">

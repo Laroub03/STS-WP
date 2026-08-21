@@ -8,7 +8,7 @@ get_header(); ?>
     <div class="page-content">
         <div class="section-hero"><div class="hero-red service-hero" id="hero">
     <div class="container">
-        <span class="eyebrow" data-wpc-id="wpc_efcfe4f073" data-wpc-editable="text">🧪 Epoxy og specialmaling</span>
+        <span class="eyebrow" data-wpc-id="wpc_efcfe4f073" data-wpc-editable="text">Epoxy og specialmaling</span>
         <h1 data-wpc-id="wpc_840365527b" data-wpc-editable="heading">Epoxy og specialmaling</h1>
         <p data-wpc-id="wpc_6185cb4fb8" data-wpc-editable="text">Specialiserede malerbehandlinger til gulve, tekniske rum og områder med særlige krav til slid og rengøring.</p>
         <div style="margin-top:1.5rem">

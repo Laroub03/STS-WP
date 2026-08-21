@@ -8,7 +8,7 @@ get_header(); ?>
     <div class="page-content">
         <div class="section-hero"><div class="hero-teal service-hero" id="hero">
   <div class="container">
-    <span class="eyebrow" data-wpc-id="wpc_30ada74e32" data-wpc-editable="text">🧽 Rengøring efter håndværkere</span>
+    <span class="eyebrow" data-wpc-id="wpc_30ada74e32" data-wpc-editable="text">Rengøring efter håndværkere</span>
     <h1 data-wpc-id="wpc_c84238da6e" data-wpc-editable="heading">Grundig rengøring og slutrengøring efter håndværkere</h1>
     <p data-wpc-id="wpc_fcab5d991b" data-wpc-editable="text">Når håndværkerne er færdige, er det tid til en grundig oprydning. STS leverer hurtig og grøndig slutrengøring så lokaler, butikker og kontorer er klar til brug hurtigst muligt.</p>
     <div style="margin-top:1.5rem">

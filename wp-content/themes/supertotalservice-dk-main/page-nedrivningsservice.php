@@ -8,7 +8,7 @@ get_header(); ?>
     <div class="page-content">
         <div class="section-hero"><div class="hero-red service-hero" id="hero">
   <div class="container">
-    <span class="eyebrow" data-wpc-id="wpc_63f7c7e345" data-wpc-editable="text">🏚️ Nedrivningsservice</span>
+    <span class="eyebrow" data-wpc-id="wpc_63f7c7e345" data-wpc-editable="text">Nedrivningsservice</span>
     <h1 data-wpc-id="wpc_d0deeda21e" data-wpc-editable="heading">Sikker og effektiv nedrivning af bygninger og konstruktioner</h1>
     <p data-wpc-id="wpc_8324ec3fa2" data-wpc-editable="text">Nedrivning kræver erfaring, planlægning og håndtering af miljøfarlige materialer. STS leverer kompetent nedrivningsservice med dokumenteret miljøhåndtering og klar tidsplan.</p>
     <div style="margin-top:1.5rem">

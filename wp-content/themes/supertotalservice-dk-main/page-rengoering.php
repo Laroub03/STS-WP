@@ -8,7 +8,7 @@ get_header(); ?>
     <div class="page-content">
         <div class="section-hero"><div class="hero-teal service-hero" id="hero">
   <div class="container">
-    <span class="eyebrow" data-wpc-id="wpc_e7b2956466" data-wpc-editable="text">🧹 Erhvervsrengøring</span>
+    <span class="eyebrow" data-wpc-id="wpc_e7b2956466" data-wpc-editable="text">Erhvervsrengøring</span>
     <h1 data-wpc-id="wpc_6c69e9691e" data-wpc-editable="heading">Erhvervsrengøring til kontorer, industri og butikker</h1>
     <p data-wpc-id="wpc_60a84d4eef" data-wpc-editable="text">Et rent arbejdsmiljø øger trivslen, produktiviteten og det professionelle udtryk overfor kunder og samarbejdspartnere. STS leverer pålidelig erhvervsrengøring med faste teams og dokumenteret kvalitetssystem.</p>
     <div style="margin-top:1.5rem">

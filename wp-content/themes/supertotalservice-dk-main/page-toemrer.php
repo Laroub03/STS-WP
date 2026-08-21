@@ -8,7 +8,7 @@ get_header(); ?>
     <div class="page-content">
         <div class="section-hero"><div class="hero-blue service-hero" id="hero">
   <div class="container">
-    <span class="eyebrow" data-wpc-id="wpc_ae12dedba6" data-wpc-editable="text">🪵 Tømrerarbejde</span>
+    <span class="eyebrow" data-wpc-id="wpc_ae12dedba6" data-wpc-editable="text">Tømrerarbejde</span>
     <h1 data-wpc-id="wpc_30310f9e83" data-wpc-editable="heading">Professionelt tømrerarbejde og snedkerservice</h1>
     <p data-wpc-id="wpc_e61fdc3bd4" data-wpc-editable="text">Tømrer- og snedkerarbejde kræver håndvæksmæssig præcision og erfaring. STS tømrere leverer solide trækonstruktioner, installationer og reparationer med respekt for æstetik og funktion.</p>
     <div style="margin-top:1.5rem">

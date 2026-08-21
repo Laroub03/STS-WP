@@ -8,7 +8,7 @@ get_header(); ?>
     <div class="page-content">
         <div class="section-hero"><div class="hero-navy service-hero" id="hero">
   <div class="container">
-    <span class="eyebrow" data-wpc-id="wpc_9976ffcebd" data-wpc-editable="text">🔨 Håndværkere</span>
+    <span class="eyebrow" data-wpc-id="wpc_9976ffcebd" data-wpc-editable="text">Håndværkere</span>
     <h1 data-wpc-id="wpc_ad034bb687" data-wpc-editable="heading">Erfarne håndværkere til virksomheder og ejendomme</h1>
     <p data-wpc-id="wpc_8e254bae09" data-wpc-editable="text">Når der opstår behov for hurtig og kompetent håndvækerservice, er STS klar. Vi mobiliserer de rette fagfolk hurtigt og sørger for en præcis og effektiv løsning.</p>
     <div style="margin-top:1.5rem">

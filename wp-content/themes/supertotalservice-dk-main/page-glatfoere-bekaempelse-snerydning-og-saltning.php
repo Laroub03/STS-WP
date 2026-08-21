@@ -8,7 +8,7 @@ get_header(); ?>
     <div class="page-content">
         <div class="section-hero"><div class="hero-slate service-hero" id="hero">
   <div class="container">
-    <span class="eyebrow" data-wpc-id="wpc_183c8473ad" data-wpc-editable="text">❄️ Snerydning og saltning</span>
+    <span class="eyebrow" data-wpc-id="wpc_183c8473ad" data-wpc-editable="text">Snerydning og saltning</span>
     <h1 data-wpc-id="wpc_a8874086d8" data-wpc-editable="heading">Professionel snerydning, saltning og glatførebekæmpelse</h1>
     <p data-wpc-id="wpc_fc45999398" data-wpc-editable="text">Glatte veje og stier er en sikkerheds- og ansvarsmæssig udfordring. STS sørger for, at jeres ejendom er sikker og fremkommelig, også i de mest krævende vintersituationer.</p>
     <div style="margin-top:1.5rem">

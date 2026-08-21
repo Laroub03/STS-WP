@@ -8,7 +8,7 @@ get_header(); ?>
     <div class="page-content">
         <div class="section-hero"><div class="hero-blue service-hero" id="hero">
   <div class="container">
-    <span class="eyebrow" data-wpc-id="wpc_94bf3aa13c" data-wpc-editable="text">✨ Gulvbehandling</span>
+    <span class="eyebrow" data-wpc-id="wpc_94bf3aa13c" data-wpc-editable="text">Gulvbehandling</span>
     <h1 data-wpc-id="wpc_523e204d01" data-wpc-editable="heading">Professionel gulvbehandling til erhverv og institutioner</h1>
     <p data-wpc-id="wpc_dc0205a0dd" data-wpc-editable="text">Et velholdt gulv signalerer professionalisme og forlænger gulvets levetid markant. STS udfører gulvbehandling på alle typer overflader med minimal driftsforstyrrelser.</p>
     <div style="margin-top:1.5rem">

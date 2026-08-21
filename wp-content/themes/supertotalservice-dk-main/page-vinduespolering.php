@@ -8,7 +8,7 @@ get_header(); ?>
     <div class="page-content">
         <div class="section-hero"><div class="hero-teal service-hero" id="hero">
   <div class="container">
-    <span class="eyebrow" data-wpc-id="wpc_bb4e9f1b54" data-wpc-editable="text">🪟 Vinduespolering</span>
+    <span class="eyebrow" data-wpc-id="wpc_bb4e9f1b54" data-wpc-editable="text">Vinduespolering</span>
     <h1 data-wpc-id="wpc_bf98536f50" data-wpc-editable="heading">Professionel vinduespolering til kontorer og erhvervsejendomme</h1>
     <p data-wpc-id="wpc_567807f3b4" data-wpc-editable="text">Rene vinduer gør et professionelt og velholdt udtryk – både indefra og udvendig. STS vinduespudsere arbejder effektivt med godkendte metoder og efterlader et stribefrit resultat.</p>
     <div style="margin-top:1.5rem">

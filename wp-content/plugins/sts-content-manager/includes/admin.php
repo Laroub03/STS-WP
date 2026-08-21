@@ -86,13 +86,7 @@ function sts_content_services_list_page() {
                     <td><?php echo esc_html($categories[get_post_meta($service->ID, '_sts_service_category', true)] ?? 'STS Ren'); ?></td>
                     <td><?php echo esc_html(mb_strimwidth($description, 0, 80, '…')); ?></td>
                     <td>
-                        <code>/<?php echo esc_html($service->post_name); ?>/</code><br>
-                        <?php if ($page) : ?>
-                            <a href="<?php echo esc_url(get_edit_post_link($page->ID)); ?>">Rediger siden</a>
-                        <?php else : ?>
-                            <span style="color:#b32d2e">Ingen side</span> —
-                            <a href="<?php echo esc_url(wp_nonce_url(admin_url('admin-post.php?action=sts_content_template&service=' . $service->ID), 'sts_content_template_' . $service->ID)); ?>">opret side</a>
-                        <?php endif; ?>
+                        <code>/<?php echo esc_html($service->post_name); ?>/</code>
                     </td>
                     <td>
                         <a class="button button-primary" href="<?php echo esc_url(sts_content_admin_url('sts-service-edit', array('service' => $service->ID))); ?>">Redigér</a>

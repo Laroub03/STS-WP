@@ -8,7 +8,7 @@ get_header(); ?>
     <div class="page-content">
         <div class="section-hero"><div class="hero-slate service-hero" id="hero">
   <div class="container">
-    <span class="eyebrow" data-wpc-id="wpc_ed421e662e" data-wpc-editable="text">🖌️ Malertjenester</span>
+    <span class="eyebrow" data-wpc-id="wpc_ed421e662e" data-wpc-editable="text">Malerarbejde</span>
     <h1 data-wpc-id="wpc_560a316132" data-wpc-editable="heading">Professionelle malerydelser til virksomheder og ejendomme</h1>
     <p data-wpc-id="wpc_2145c080dd" data-wpc-editable="text">Et nyt malingsstrøg kan transformere et rum, forny et udtryk og beskytte bygningens overflader. STS malere leverer præcist og velordnet arbejde med respekt for jeres dagligdag.</p>
     <div style="margin-top:1.5rem">

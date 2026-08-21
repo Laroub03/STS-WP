@@ -8,7 +8,7 @@ get_header(); ?>
     <div class="page-content">
         <div class="section-hero"><div class="hero-amber service-hero" id="hero">
   <div class="container">
-    <span class="eyebrow" data-wpc-id="wpc_20b1d2d93b" data-wpc-editable="text">⚠️ Asbestarbejde</span>
+    <span class="eyebrow" data-wpc-id="wpc_20b1d2d93b" data-wpc-editable="text">Asbestarbejde</span>
     <h1 data-wpc-id="wpc_950504ab61" data-wpc-editable="heading">Certificeret asbestarbejde og sanering</h1>
     <p data-wpc-id="wpc_dc7330d760" data-wpc-editable="text">Asbest kræver autoriseret håndtering. STS ApS har den nødvendige uddannelse, certificering og erfaring til at udføre asbestarbejde sikkert og lovlydigt.</p>
     <div style="margin-top:1.5rem">

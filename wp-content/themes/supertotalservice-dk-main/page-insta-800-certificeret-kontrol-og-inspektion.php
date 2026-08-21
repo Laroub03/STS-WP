@@ -8,7 +8,7 @@ get_header(); ?>
     <div class="page-content">
         <div class="section-hero"><div class="hero-slate service-hero" id="hero">
   <div class="container">
-    <span class="eyebrow" data-wpc-id="wpc_0174c68a66" data-wpc-editable="text">📋 INSTA 800 Certificering</span>
+    <span class="eyebrow" data-wpc-id="wpc_0174c68a66" data-wpc-editable="text">INSTA 800 Certificering</span>
     <h1 data-wpc-id="wpc_31a74d30b1" data-wpc-editable="heading">INSTA 800 certificeret rengøringskvalitet og inspektion</h1>
     <p data-wpc-id="wpc_58ae9d92a5" data-wpc-editable="text">INSTA 800 er den nordiske standard for måling og dokumentation af rengøringskvalitet. STS ApS er certificeret og anvender standarden til at sikre og bevise høj kvalitet i alt rengøringsarbejde.</p>
     <div style="margin-top:1.5rem">

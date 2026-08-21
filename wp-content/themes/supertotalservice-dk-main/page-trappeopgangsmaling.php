@@ -8,7 +8,7 @@ get_header(); ?>
     <div class="page-content">
         <div class="section-hero"><div class="hero-slate service-hero" id="hero">
     <div class="container">
-        <span class="eyebrow" data-wpc-id="wpc_adf75b4e5a" data-wpc-editable="text">🧭 Trappeopgangsmaling</span>
+        <span class="eyebrow" data-wpc-id="wpc_adf75b4e5a" data-wpc-editable="text">Trappeopgangsmaling</span>
         <h1 data-wpc-id="wpc_c04281c702" data-wpc-editable="heading">Trappeopgangsmaling</h1>
         <p data-wpc-id="wpc_165c5570f8" data-wpc-editable="text">Maling og opfriskning af trappeopgange og fællesarealer med slidstærke produkter og pæn afslutning.</p>
         <div style="margin-top:1.5rem">

@@ -8,7 +8,7 @@ get_header(); ?>
     <div class="page-content">
         <div class="section-hero"><div class="hero-navy service-hero" id="hero">
   <div class="container">
-    <span class="eyebrow" data-wpc-id="wpc_eebff7c413" data-wpc-editable="text">🧱 Murerarbejde</span>
+    <span class="eyebrow" data-wpc-id="wpc_eebff7c413" data-wpc-editable="text">Murerarbejde</span>
     <h1 data-wpc-id="wpc_c3c1e5959d" data-wpc-editable="heading">Professionelt murerarbejde til erhverv og ejendomme</h1>
     <p data-wpc-id="wpc_56c6d0d7fe" data-wpc-editable="text">Fra små reparationer til større renoveringsprojekter – STS murere leverer solide og holdbare løsninger. Vi samarbejder tæt med bygherre og andre håndvækere for et problemfrit forløb.</p>
     <div style="margin-top:1.5rem">
