@@ -1,0 +1,296 @@
+/* STS Projects — matches the theme's card/section design tokens. */
+
+.project-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.project-filter-btn {
+  padding: 0.55rem 1.15rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.project-filter-btn:hover {
+  border-color: rgba(0, 139, 209, 0.38);
+  color: var(--primary);
+}
+
+.project-filter-btn.is-active {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  border-color: transparent;
+  color: #fff;
+}
+
+.project-grid {
+  display: grid;
+  /* min() keeps the track from exceeding the container on narrow phones. */
+  grid-template-columns: repeat(auto-fill, minmax(min(310px, 100%), 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 139, 209, 0.38);
+}
+
+.project-card[hidden] {
+  display: none;
+}
+
+.project-card-media {
+  position: relative;
+  display: block;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  background: var(--surface-muted);
+}
+
+.project-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-card-media img {
+  transform: scale(1.04);
+}
+
+.project-card-tag,
+.project-card-badge {
+  position: absolute;
+  top: 0.85rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  backdrop-filter: blur(6px);
+}
+
+.project-card-tag {
+  left: 0.85rem;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--primary-strong);
+}
+
+.project-card-badge {
+  right: 0.85rem;
+  background: rgba(15, 23, 42, 0.72);
+  color: #fff;
+}
+
+.project-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  gap: 0.6rem;
+  padding: 1.35rem;
+}
+
+.project-card-location {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.project-card-body h3 {
+  margin: 0;
+  font-size: 1.12rem;
+  line-height: 1.35;
+}
+
+.project-card-body h3 a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.project-card-body h3 a:hover {
+  color: var(--primary);
+}
+
+.project-card-body p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.project-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-chips li {
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--primary-strong);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.project-chips .project-chip-more {
+  background: transparent;
+  border: 1px dashed var(--border);
+  color: var(--muted);
+}
+
+.project-card-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: auto;
+  padding-top: 0.9rem;
+}
+
+.project-card-count {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.project-empty-note {
+  margin-top: 1.5rem;
+  color: var(--muted);
+}
+
+/* Single project ------------------------------------------------ */
+
+.project-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+
+.project-fact dt {
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+
+.project-fact dd {
+  margin: 0.25rem 0 0;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.project-compare {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.project-compare-item {
+  position: relative;
+  margin: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.project-compare-item img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.project-compare-item figcaption {
+  position: absolute;
+  top: 0.9rem;
+  left: 0.9rem;
+}
+
+.project-compare-label {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.project-compare-label.is-before {
+  background: rgba(15, 23, 42, 0.78);
+}
+
+.project-compare-label.is-after {
+  background: linear-gradient(135deg, var(--primary-strong), var(--accent));
+}
+
+.project-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.project-body-text {
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+.project-body-text > *:first-child {
+  margin-top: 0;
+}
+
+.project-body-text h2,
+.project-body-text h3 {
+  color: var(--text);
+}
+
+.project-materials {
+  padding: 1.35rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+@media (max-width: 860px) {
+  .project-body {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .project-compare {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

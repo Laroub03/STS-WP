@@ -771,7 +771,7 @@
             }
         ?>
         </a>
-        <button class="nav-toggle" type="button" aria-label="Åbn menu" aria-expanded="false" data-nav-toggle-bound="true" data-state="closed">☰</button>
+        <button class="nav-toggle" type="button" aria-label="Åbn menu" aria-expanded="false" data-state="closed">☰</button>
         <nav class="site-nav" aria-label="Primær navigation"><?php
       // Flat nav menu - converted from React/Vite site
       $menu_data = json_decode(@file_get_contents(get_template_directory() . '/assets/data/menus.json'), true);

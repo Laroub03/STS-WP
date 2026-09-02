@@ -68,7 +68,6 @@ get_header(); ?>
         <div class="pillar-grid" data-pillar-list-root="" data-path-prefix="../">
 <article class="pillar-card pillar-byg" data-pillar-card-category="byg">
                 <div class="pillar-head">
-                    <span class="pillar-icon">🏗️</span>
                     <h3 data-wpc-id="wpc_e45953e3a9" data-wpc-editable="heading">STS Byg</h3>
                 </div>
                 <p data-wpc-id="wpc_f96262d56c" data-wpc-editable="text">Til byggepladser, nedrivning og praktisk bemanding med fokus på sikker drift og fremdrift.</p>
@@ -77,7 +76,6 @@ get_header(); ?>
 
             <article class="pillar-card pillar-mal" data-pillar-card-category="mal">
                 <div class="pillar-head">
-                    <span class="pillar-icon">🎨</span>
                     <h3 data-wpc-id="wpc_205ba7830a" data-wpc-editable="heading">STS Mal</h3>
                 </div>
                 <p data-wpc-id="wpc_36b70e6b28" data-wpc-editable="text">Til opfriskning, finish og løbende vedligehold med professionelle maler- og håndværksløsninger.</p>
@@ -86,7 +84,6 @@ get_header(); ?>
 
             <article class="pillar-card pillar-ren" data-pillar-card-category="ren">
                 <div class="pillar-head">
-                    <span class="pillar-icon">🫧</span>
                     <h3 data-wpc-id="wpc_e82987cc28" data-wpc-editable="heading">STS Ren</h3>
                 </div>
                 <p data-wpc-id="wpc_517a8e5319" data-wpc-editable="text">Til daglig drift, rengøring og ejendomspleje med stabile aftaler og synlig kvalitet.</p>

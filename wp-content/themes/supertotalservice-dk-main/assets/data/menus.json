@@ -24,6 +24,16 @@
         "isButton": false
       },
       {
+        "title": "Projekter",
+        "url": "/projekter/",
+        "classes": [],
+        "attributes": {
+          "href": "projekter/index.html"
+        },
+        "children": [],
+        "isButton": false
+      },
+      {
         "title": "Nyheder",
         "url": "/blog",
         "classes": [],

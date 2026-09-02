@@ -37,10 +37,7 @@ get_header(); ?>
         <a href="https://www.google.com/maps/search/?api=1&amp;query=Super+Total+Service+ApS" target="_blank" rel="noopener" style="font-size:.88rem;color:var(--primary);font-weight:600;margin-top:.3rem;display:inline-block" data-wpc-id="wpc_bf5da4f59b" data-wpc-editable="link">Vis på kort ↗</a>
       </div>
     </div>
-    <div class="map-embed">
-      <iframe src="https://www.google.com/maps?hl=da&amp;ll=55.699936,12.433969&amp;z=18&amp;output=embed&amp;q=Super+Total+Service+ApS" title="Super Total Service ApS - Krondalvej 8, 2610 Rødovre" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
+    <div class="map-embed lazy-map-wrap" aria-label="Google kort"></div>
     <div class="contact-hours">
       <h3 data-wpc-id="wpc_5b08ca059c" data-wpc-editable="heading">Åbningstider</h3>
       <div class="hours-row" data-wpc-id="wpc_9dd262c793" data-wpc-editable="heading"><span>Mandag – Torsdag</span><span>07:00 – 16:00</span></div>
@@ -93,7 +90,9 @@ get_header(); ?>
           <textarea id="c-msg" name="message" rows="5" placeholder="Beskriv hvad I har brug for, hvornår og evt. hvor..." required=""></textarea>
         </div>
       </div>
-      <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" style="margin-top:.75rem"><div style="width: 304px; height: 78px;"><div></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div>
+      <div class="g-recaptcha-wrap" style="margin-top:.75rem; margin-bottom:.75rem;">
+        <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" data-theme="dark"></div>
+      </div>
       <button class="btn btn-primary" type="submit" style="margin-top:.75rem;width:100%" data-wpc-id="wpc_0b2407e54b" data-wpc-editable="button">Send forespørgsel</button>
       <p style="font-size:.86rem;color:var(--muted);margin-top:.75rem" data-wpc-id="wpc_71c3171b55" data-wpc-editable="text">Vi svarer inden for en arbejdsdag. Alle henvendelser behandles fortroligt.</p>
     </form>
@@ -120,6 +119,83 @@ get_header(); ?>
       }
     } catch (_) {}
   }, true);
+})();
+</script>
+<script>
+(function () {
+  var nav = document.querySelector('.site-nav');
+  var toggle = document.querySelector('.nav-toggle');
+  if (nav) {
+    nav.classList.remove('open');
+    nav.setAttribute('aria-expanded', 'false');
+  }
+  if (toggle) {
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+
+  var searchModal = document.getElementById('wpconvert-search-modal');
+  if (searchModal) {
+    searchModal.classList.remove('open');
+  }
+
+  var mobileNav = document.getElementById('wpconvert-mobile-nav');
+  if (mobileNav) {
+    mobileNav.classList.remove('open');
+  }
+
+  var body = document.body;
+  if (body) {
+    body.classList.remove('mobile-nav-open');
+  }
+
+  function loadRecaptchaOnce() {
+    if (window.__stsRecaptchaLoaded) return;
+    window.__stsRecaptchaLoaded = true;
+
+    var script = document.createElement('script');
+    script.src = 'https://www.google.com/recaptcha/api.js';
+    script.async = true;
+    script.defer = true;
+    document.head.appendChild(script);
+  }
+
+  var mapWrap = document.querySelector('.lazy-map-wrap');
+  if (mapWrap) {
+    function activateMap() {
+      if (mapWrap.dataset.loaded === 'true') return;
+      mapWrap.dataset.loaded = 'true';
+
+      var iframe = document.createElement('iframe');
+      iframe.src = 'https://www.google.com/maps?hl=da&ll=55.699936,12.433969&z=18&output=embed&q=Super+Total+Service+ApS';
+      iframe.title = 'Super Total Service ApS - Krondalvej 8, 2610 Rødovre';
+      iframe.allowFullscreen = true;
+      iframe.loading = 'lazy';
+      iframe.referrerPolicy = 'no-referrer-when-downgrade';
+      iframe.setAttribute('style', 'width:100%;height:100%;border:0;display:block;pointer-events:auto;');
+      mapWrap.appendChild(iframe);
+    }
+
+    if ('IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function (entries, obs) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            activateMap();
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: '200px 0px' });
+      observer.observe(mapWrap);
+    } else {
+      setTimeout(activateMap, 300);
+    }
+  }
+
+  var form = document.querySelector('.contact-form-card form');
+  if (!form) return;
+
+  ['focusin', 'click', 'pointerdown', 'keydown'].forEach(function (eventName) {
+    form.addEventListener(eventName, loadRecaptchaOnce, { once: true, passive: true });
+  });
 })();
 </script>
 <?php get_footer(); ?>

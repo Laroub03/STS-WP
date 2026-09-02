@@ -36,13 +36,56 @@ if ( is_front_page() && 'page' === get_option( 'show_on_front' ) ) {
         <a class="btn btn-secondary" href="<?php echo home_url('/service/'); ?>" data-wpc-id="wpc_ddf696f19d" data-wpc-editable="button">Se alle ydelser</a>
       </div>
     </div>
-    <div class="hero-card">
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sliderdark-20260811-143051-2c441c.jpg" alt="Professionel servicemedarbejder fra STS ApS i aktion" data-wpc-id="wpc_c6d652e8f1" data-wpc-editable="image">
-      <div class="metric-strip" data-wpc-id="wpc_66bf3c95ea" data-wpc-editable="text">
-        <div class="metric"><strong>24/7</strong><span>Beredskab</span></div>
-        <div class="metric"><strong>100%</strong><span>Fleksibel</span></div>
-        <div class="metric"><strong>20+</strong><span>Erfaring</span></div>
-        <div class="metric"><strong>2 t</strong><span>Svartid</span></div>
+<?php
+    // Hero carousel slides: one image per service, so visitors can browse what we do.
+    $sts_hero_slides = array();
+    if ( function_exists( 'sts_content_get_services' ) && function_exists( 'sts_content_service_image' ) ) {
+        foreach ( sts_content_get_services() as $sts_hero_service ) {
+            if ( 'publish' !== $sts_hero_service->post_status ) {
+                continue;
+            }
+            $sts_hero_slides[] = array(
+                'image' => sts_content_service_image( $sts_hero_service->ID ),
+                'title' => get_the_title( $sts_hero_service ),
+            );
+        }
+    }
+    if ( empty( $sts_hero_slides ) ) {
+        $sts_hero_fallback = array(
+            'rengoering'                                   => 'Erhvervsrengøring',
+            'byggepladsservice'                            => 'Byggepladsservice',
+            'asbest-og-nedrivning'                         => 'Asbest og nedrivning',
+            'haandvaerkere'                                => 'Håndværkere',
+            'maler'                                        => 'Malerarbejde',
+            'murer'                                        => 'Murerarbejde',
+            'toemrer'                                      => 'Tømrerarbejde',
+            'ejendomsservice'                              => 'Ejendomsservice',
+            'vicevaertservice'                             => 'Viceværtservice',
+            'gartnerservice'                               => 'Gartnerservice',
+            'vinduespolering'                              => 'Vinduespolering',
+            'gulvbehandling'                               => 'Gulvbehandling',
+            'mandskabsudlejning'                           => 'Mandskabsudlejning',
+            'glatfoere-bekaempelse-snerydning-og-saltning' => 'Snerydning og saltning',
+        );
+        foreach ( $sts_hero_fallback as $sts_hero_slug => $sts_hero_title ) {
+            $sts_hero_slides[] = array(
+                'image' => get_template_directory_uri() . '/assets/images/' . $sts_hero_slug . '.jpg',
+                'title' => $sts_hero_title,
+            );
+        }
+    }
+    ?>
+    <?php /* data-wpc-carousel opts this out of the theme's universal carousel JS (which would display:none our slides); it stays inert for wpconvert-hero-carousel.js, which requires the value "true". */ ?>
+    <div class="hero-card hero-carousel" data-hero-carousel data-wpc-carousel tabindex="0" role="group" aria-roledescription="karrusel" aria-label="Billeder af vores serviceydelser">
+      <div class="hero-carousel-viewport">
+<?php foreach ( $sts_hero_slides as $sts_hero_index => $sts_hero_slide ) : ?>
+        <figure class="hero-slide<?php echo 0 === $sts_hero_index ? ' is-active' : ''; ?>" aria-hidden="<?php echo 0 === $sts_hero_index ? 'false' : 'true'; ?>">
+          <img src="<?php echo esc_url( $sts_hero_slide['image'] ); ?>" alt="<?php echo esc_attr( $sts_hero_slide['title'] ); ?>" loading="<?php echo 0 === $sts_hero_index ? 'eager' : 'lazy'; ?>">
+          <figcaption><?php echo esc_html( $sts_hero_slide['title'] ); ?></figcaption>
+        </figure>
+<?php endforeach; ?>
+        <button type="button" class="hero-carousel-nav hero-carousel-prev" data-hero-prev aria-label="Forrige billede">&#8249;</button>
+        <button type="button" class="hero-carousel-nav hero-carousel-next" data-hero-next aria-label="Næste billede">&#8250;</button>
       </div>
     </div>
   </div>
@@ -60,7 +103,6 @@ if ( is_front_page() && 'page' === get_option( 'show_on_front' ) ) {
     <div class="pillar-grid" data-pillar-list-root="" data-path-prefix="">
       <article class="pillar-card pillar-byg" data-pillar-card-category="byg">
         <div class="pillar-head">
-          <span class="pillar-icon">🏗️</span>
           <h3 data-wpc-id="wpc_e476499724" data-wpc-editable="heading">STS Byg</h3>
         </div>
         <p data-wpc-id="wpc_d195ff5422" data-wpc-editable="text">Til byggepladser, nedrivning og praktisk bemanding med fokus på sikker drift og fremdrift.</p>
@@ -69,7 +111,6 @@ if ( is_front_page() && 'page' === get_option( 'show_on_front' ) ) {
 
       <article class="pillar-card pillar-mal" data-pillar-card-category="mal">
         <div class="pillar-head">
-          <span class="pillar-icon">🎨</span>
           <h3 data-wpc-id="wpc_9fb4640e6c" data-wpc-editable="heading">STS Mal</h3>
         </div>
         <p data-wpc-id="wpc_2fe1cc0e9a" data-wpc-editable="text">Til opfriskning, finish og løbende vedligehold med professionelle maler- og håndværksløsninger.</p>
@@ -78,7 +119,6 @@ if ( is_front_page() && 'page' === get_option( 'show_on_front' ) ) {
 
       <article class="pillar-card pillar-ren" data-pillar-card-category="ren">
         <div class="pillar-head">
-          <span class="pillar-icon">🫧</span>
           <h3 data-wpc-id="wpc_e8d7c7c18a" data-wpc-editable="heading">STS Ren</h3>
         </div>
         <p data-wpc-id="wpc_7d71e7b989" data-wpc-editable="text">Til daglig drift, rengøring og ejendomspleje med stabile aftaler og synlig kvalitet.</p>
