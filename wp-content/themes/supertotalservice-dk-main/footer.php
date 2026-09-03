@@ -42,7 +42,7 @@
     <div class="footer-theme-controls">
       <button type="button" class="theme-subtle-toggle" data-theme-toggle="" aria-label="Skift tema" title="Skift tema" data-wpc-id="wpc_4f6397fcd7" data-wpc-editable="button">Tema: Auto</button>
     </div>
-    <p data-wpc-id="wpc_f63a94fad2" data-wpc-editable="text">© 2025 STS ApS – CVR: 25 46 39 44</p>
+    <p data-wpc-id="wpc_f63a94fad2" data-wpc-editable="text">© 2025 STS ApS – CVR: 32 27 03 95</p>
   </div>
 </footer>
     

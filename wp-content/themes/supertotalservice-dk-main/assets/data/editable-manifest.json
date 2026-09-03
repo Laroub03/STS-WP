@@ -38,7 +38,7 @@
   {
     "id": "wpc_f63a94fad2",
     "type": "text",
-    "defaultValue": "© 2025 STS ApS – CVR: 25 46 39 44",
+    "defaultValue": "© 2025 STS ApS – CVR: 32 27 03 95",
     "templateFile": "footer.php"
   },
   {
@@ -2870,7 +2870,7 @@
   {
     "id": "wpc_2164c1fadf",
     "type": "text",
-    "defaultValue": "STS ApS (CVR: 25 46 39 44) leverer serviceydelser til erhvervskunder. Alle aftaler er underlagt dansk ret.",
+    "defaultValue": "STS ApS (CVR: 32 27 03 95) leverer serviceydelser til erhvervskunder. Alle aftaler er underlagt dansk ret.",
     "templateFile": "page-handelsbetingelser.php"
   },
   {

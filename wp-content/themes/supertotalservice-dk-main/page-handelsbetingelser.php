@@ -13,7 +13,7 @@ get_header(); ?>
     <p style="color:var(--muted)" data-wpc-id="wpc_4e1fddda7e" data-wpc-editable="text">Disse handelsbetingelser gælder for alle ydelser leveret af STS ApS.</p>
 
     <h2 data-wpc-id="wpc_cbbf5ff040" data-wpc-editable="heading">1. Generelt</h2>
-    <p data-wpc-id="wpc_2164c1fadf" data-wpc-editable="text">STS ApS (CVR: 25 46 39 44) leverer serviceydelser til erhvervskunder. Alle aftaler er underlagt dansk ret.</p>
+    <p data-wpc-id="wpc_2164c1fadf" data-wpc-editable="text">STS ApS (CVR: 32 27 03 95) leverer serviceydelser til erhvervskunder. Alle aftaler er underlagt dansk ret.</p>
 
     <h2 data-wpc-id="wpc_d90c209d81" data-wpc-editable="heading">2. Tilbud og aftale</h2>
     <p data-wpc-id="wpc_8b62e450f0" data-wpc-editable="text">Tilbud er gældende i 30 dage fra afsendelsesdato, med mindre andet er aftalt skriftligt. En bindende aftale er indgået når begge parter har bekræftet opgaven skriftligt.</p>
